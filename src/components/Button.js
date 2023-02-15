@@ -7,7 +7,7 @@ const StyledButton = styled.button`
   border: none;
   color: #fff;
   font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   transition: all .3s;
   cursor: pointer;
   
