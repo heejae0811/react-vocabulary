@@ -1,7 +1,11 @@
+import Title from '../../components/Title'
+
 const Login = () => {
   return (
-    <div>
-      <h1>로그인 페이지</h1>
+    <div className="wrap">
+      <div className="inner">
+        <Title>Welcome, vocabulary world</Title>
+      </div>
     </div>
   )
 }

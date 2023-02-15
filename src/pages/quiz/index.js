@@ -1,7 +1,11 @@
+import Title from '../../components/Title'
+
 const Quiz = () => {
   return (
-    <div>
-      <h1>퀴즈 페이지</h1>
+    <div className="wrap">
+      <div className="inner">
+        <Title>Let's start vocabulary test</Title>
+      </div>
     </div>
   )
 }

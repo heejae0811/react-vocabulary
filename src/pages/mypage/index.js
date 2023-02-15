@@ -1,7 +1,11 @@
+import Title from '../../components/Title'
+
 const Mypage = () => {
   return (
-    <div>
-      <h1>마이 페이지</h1>
+    <div className="wrap">
+      <div className="inner">
+        <Title>My page</Title>
+      </div>
     </div>
   )
 }

@@ -1,7 +1,11 @@
+import Title from '../../components/Title'
+
 const Join = () => {
   return (
-    <div>
-      <h1>회원가입 페이지</h1>
+    <div className="wrap">
+      <div className="inner">
+        <Title>Make your account</Title>
+      </div>
     </div>
   )
 }
