@@ -1,13 +1,12 @@
+import Layout from '../../components/Layout'
 import Title from '../../components/Title'
 
-const Mypage = () => {
+const MyPage = () => {
   return (
-    <div className="wrap">
-      <div className="inner">
-        <Title>My page</Title>
-      </div>
-    </div>
+    <Layout className="mypage">
+      <Title>My page</Title>
+    </Layout>
   )
 }
 
-export default Mypage
+export default MyPage

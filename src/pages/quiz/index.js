@@ -1,12 +1,12 @@
+import {useSelector} from 'react-redux'
+import Layout from '../../components/Layout'
 import Title from '../../components/Title'
 
 const Quiz = () => {
   return (
-    <div className="wrap">
-      <div className="inner">
+    <Layout>
         <Title>Let's start vocabulary test</Title>
-      </div>
-    </div>
+    </Layout>
   )
 }
 
