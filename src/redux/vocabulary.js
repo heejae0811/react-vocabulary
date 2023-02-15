@@ -11,7 +11,7 @@ export const vocabularySlice = createSlice({
 
   reducers: {
     handleSelectedVocabulary: (state, action) => {
-
+      state.selectedVocabulary = state.vocabulary.filter(vocabulary => vocabulary.category === action.payload)
     },
     handleCreateVocabulary: (state, action) => {
 

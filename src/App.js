@@ -18,7 +18,7 @@ function App() {
         <Route path="/join" element={<Join/>}/>
         <Route path="/mypage" element={<MyPage/>}/>
         <Route path="/" element={<Quiz/>}/>
-        <Route path="/quiz" element={<Quiz/>}/>
+        <Route path="/quiz/:category" element={<Quiz/>}/>
         <Route path="/quizList" element={<QuizList/>}/>
         <Route path="/quizCreate" element={<QuizCreate/>}/>
       </Routes>
