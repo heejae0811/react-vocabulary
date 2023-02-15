@@ -1,11 +1,17 @@
+import {useNavigate} from 'react-router'
 import {useSelector} from 'react-redux'
 import Layout from '../../components/Layout'
 import Title from '../../components/Title'
+import Button from '../../components/Button'
+import './index.scss'
 
 const QuizList = () => {
+  const navigate = useNavigate()
+
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
 
-  console.log(vocabulary)
+  const category = new Set(vocabulary.map((list, index) => list.category))
+  const vocabularyCategory = [...category]
 
   return (
     <Layout className="quiz-list">
@@ -13,13 +19,15 @@ const QuizList = () => {
 
       <ul>
         {
-          vocabulary.map((list, index) => {
+          vocabularyCategory.map((list, index) => {
             return (
-              <li key={index}>{list.category}</li>
+              <li key={index}>{list}</li>
             )
           })
         }
       </ul>
+
+      <Button onClick={() => navigate('/quizCreate')} bgColor="#ecdc6d">Create new vocabulary</Button>
     </Layout>
   )
 }

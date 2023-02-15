@@ -5,6 +5,7 @@ const StyledButton = styled.button`
   height: 50px;
   background-color: ${props => props.bgColor};
   border: none;
+  border-radius: 10px;
   color: #fff;
   font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
   font-size: 15px;

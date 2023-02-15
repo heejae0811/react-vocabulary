@@ -18,5 +18,5 @@ export const vocabulary = [
     category: '사물',
     english: 'computer',
     korea: '컴퓨터'
-  },
+  }
 ]

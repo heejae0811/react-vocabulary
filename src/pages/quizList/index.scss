@@ -1,0 +1,35 @@
+.quiz-list {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 10px;
+      transition: all .3s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &:nth-child(2n-1) {
+        background-color: #2b2861;
+      }
+
+      &:nth-child(2n) {
+        background-color: #382861;
+      }
+    }
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}

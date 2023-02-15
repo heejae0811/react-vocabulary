@@ -16,6 +16,10 @@ body {
   }
 
   .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
     position: absolute;
     top: 50%;
     left: 50%;
