@@ -6,7 +6,6 @@ import {persistStore} from 'redux-persist'
 import {PersistGate} from 'redux-persist/integration/react'
 import {store} from './redux/store'
 import App from './App'
-import './assets/scss/common.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 const persistor = persistStore(store)

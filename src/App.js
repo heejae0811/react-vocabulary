@@ -5,11 +5,14 @@ import Mypage from './pages/mypage'
 import Quiz from './pages/quiz'
 import QuizList from './pages/quizList'
 import QuizCreate from './pages/quizCreate'
-import './App.scss'
+import {Reset} from 'styled-reset'
+import './assets/scss/common.scss'
 
 function App() {
   return (
     <>
+      <Reset/>
+
       <Routes>
         <Route path="/login" element={<Login/>}/>
         <Route path="/join" element={<Join/>}/>

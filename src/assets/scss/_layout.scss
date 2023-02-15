@@ -21,7 +21,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 720px;
-    width: 90%;
+    width: 80%;
     min-height: 720px;
     margin: 0 auto;
     padding: 20px;
@@ -33,6 +33,8 @@ body {
 
 @media screen and (max-width: 720px) {
   body {
-    background-color: #ddd;
+    .inner {
+      min-height: fit-content;
+    }
   }
 }
