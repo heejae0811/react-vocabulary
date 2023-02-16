@@ -32,7 +32,7 @@ const Login = () => {
     } else {
       dispatch(handleLogin({
         loginId: isLoginId,
-        password: isLoginPw
+        loginPw: isLoginPw
       }))
       alert('로그인 되었습니다.')
       navigate('/quizList')

@@ -3,25 +3,19 @@ import {useParams, useNavigate} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
 import {handleSelectedVocabulary} from '../../redux/vocabulary'
 import Layout from '../../components/Layout'
-import Title from '../../components/Title'
-import Input from '../../components/Input'
 import Question from './Question'
+import Result from './Result'
 import './index.scss'
 
 const Quiz = () => {
-  const [isAnswer, setAnswer] = useState('')
   const [activeQuestion, setActiveQuestion] = useState(0)
-
-  console.log(isAnswer)
-  // console.log(setAnswer)
 
   const params = useParams()
   const dispatch = useDispatch()
 
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
-
-  // console.log(selectedVocabulary)
+  const vocabularyLength = selectedVocabulary.length
 
   useEffect(() => {
 
@@ -37,8 +31,6 @@ const Quiz = () => {
 
   return (
     <Layout>
-      <Title>Let's start vocabulary test</Title>
-
       {
         selectedVocabulary.map((question, index) => {
           return (
@@ -46,6 +38,7 @@ const Quiz = () => {
               key={index}
               className={`${index === activeQuestion ? 'active' : ''}`}
               question={question}
+              length={vocabularyLength}
               activeQuestion={activeQuestion}
               setActiveQuestion={setActiveQuestion}
             />
@@ -53,7 +46,11 @@ const Quiz = () => {
         })
       }
 
-      {/*<Input type="text" value={isAnswer} onChange={e => setAnswer(e.target.value)} palceholder="답을 입력해주세요."></Input>*/}
+      {
+        selectedVocabulary.length === activeQuestion && (
+          <Result/>
+        )
+      }
     </Layout>
   )
 }

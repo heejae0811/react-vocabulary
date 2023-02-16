@@ -10,18 +10,16 @@
     font-size: 50px;
     font-weight: 700;
     text-align: center;
-  }사자
-
-  p {
-    display: none;
-    text-indent: -9999px;
   }
 
   input {
-    margin: 50px auto;
+    margin: 50px auto 20px;
   }
 
-  button {
 
+  .pagination {
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center;
   }
 }
