@@ -4,6 +4,7 @@ const StyledButton = styled.button`
   width: 100%;
   height: 50px;
   background-color: ${props => props.bgColor};
+  outline: none;
   border: none;
   border-radius: 10px;
   color: #fff;

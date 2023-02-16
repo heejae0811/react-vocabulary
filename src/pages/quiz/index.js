@@ -4,11 +4,16 @@ import {useDispatch, useSelector} from 'react-redux'
 import {handleSelectedVocabulary} from '../../redux/vocabulary'
 import Layout from '../../components/Layout'
 import Title from '../../components/Title'
+import Input from '../../components/Input'
 import Question from './Question'
 import './index.scss'
 
 const Quiz = () => {
+  const [isAnswer, setAnswer] = useState('')
   const [activeQuestion, setActiveQuestion] = useState(0)
+
+  console.log(isAnswer)
+  // console.log(setAnswer)
 
   const params = useParams()
   const dispatch = useDispatch()
@@ -16,7 +21,11 @@ const Quiz = () => {
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
 
-  console.log(selectedVocabulary)
+  // console.log(selectedVocabulary)
+
+  useEffect(() => {
+
+  }, [])
 
   useEffect(() => {
     if (params.category && vocabulary.filter(category => category.category === params.category)) {
@@ -43,6 +52,8 @@ const Quiz = () => {
           )
         })
       }
+
+      {/*<Input type="text" value={isAnswer} onChange={e => setAnswer(e.target.value)} palceholder="답을 입력해주세요."></Input>*/}
     </Layout>
   )
 }

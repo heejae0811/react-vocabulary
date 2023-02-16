@@ -15,6 +15,9 @@ export const vocabularySlice = createSlice({
     },
     handleCreateVocabulary: (state, action) => {
 
+    },
+    handleQuizAnswer: (state, action) => {
+
     }
   }
 })
