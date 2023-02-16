@@ -1,25 +1,19 @@
-import {useState} from 'react'
-import Title from '../../components/Title'
 import Button from '../../components/Button'
+import Title from '../../components/Title'
 import Input from '../../components/Input'
 
 
 const Question = props => {
-  const {className, question, length, activeQuestion, setActiveQuestion} = props
-
-  console.log(question)
-
-  const [answer, setAnswer] = useState('')
-  const [record, setRecord] = useState([])
+  const {className, question, length, activeQuestion, setActiveQuestion, answer, setAnswer, record, setRecord} = props
 
   const handelQuestionClick = () => {
     setActiveQuestion(activeQuestion + 1)
 
     setRecord(record => [...record, answer])
     setAnswer('')
-
-    console.log(record)
   }
+
+  console.log(record)
 
   return (
     <div className={`question ${className}`}>
@@ -31,7 +25,7 @@ const Question = props => {
 
       <p className="pagination">{activeQuestion + 1} / {length}</p>
 
-      <Button onClick={handelQuestionClick} bgColor="#ecdc6d">Next</Button>
+      <Button onClick={() => handelQuestionClick()} bgColor="#ecdc6d">Next</Button>
     </div>
   )
 }

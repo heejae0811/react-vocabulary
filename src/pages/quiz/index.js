@@ -8,6 +8,8 @@ import Result from './Result'
 import './index.scss'
 
 const Quiz = () => {
+  const [answer, setAnswer] = useState('')
+  const [record, setRecord] = useState([])
   const [activeQuestion, setActiveQuestion] = useState(0)
 
   const params = useParams()
@@ -15,11 +17,10 @@ const Quiz = () => {
 
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
+  const koreaAnswer = selectedVocabulary.map(answer => answer.korea)
   const vocabularyLength = selectedVocabulary.length
 
-  useEffect(() => {
-
-  }, [])
+  console.log(selectedVocabulary.map(answer => answer.korea))
 
   useEffect(() => {
     if (params.category && vocabulary.filter(category => category.category === params.category)) {
@@ -39,6 +40,10 @@ const Quiz = () => {
               className={`${index === activeQuestion ? 'active' : ''}`}
               question={question}
               length={vocabularyLength}
+              answer={answer}
+              setAnswer={setAnswer}
+              record={record}
+              setRecord={setRecord}
               activeQuestion={activeQuestion}
               setActiveQuestion={setActiveQuestion}
             />
@@ -48,7 +53,10 @@ const Quiz = () => {
 
       {
         selectedVocabulary.length === activeQuestion && (
-          <Result/>
+          <Result
+            record={record}
+            koreaAnswer={koreaAnswer}
+          />
         )
       }
     </Layout>

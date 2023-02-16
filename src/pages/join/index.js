@@ -1,9 +1,9 @@
 import {useNavigate} from 'react-router'
-import Title from '../../components/Title'
-import Input from '../../components/Input'
 import Button from '../../components/Button'
-import './index.scss'
+import Input from '../../components/Input'
 import Layout from '../../components/Layout'
+import Title from '../../components/Title'
+import './index.scss'
 
 const Join = () => {
   const navigate = useNavigate()
