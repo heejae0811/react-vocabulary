@@ -15,9 +15,6 @@ const Login = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const users = useSelector(state => state.user.users)
-  const loginUser = useSelector(state => state.user.loginUser)
-
-  console.log(users)
 
   const onLogin = () => {
     const userId = users.filter(user => user.loginId === isLoginId)

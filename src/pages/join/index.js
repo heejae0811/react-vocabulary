@@ -16,7 +16,7 @@ const Join = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
-  const createUser = () => {
+  const onCreateUser = () => {
     if (isName === '') {
       alert('이름을 입력해주세요.')
     } else if (isId === '') {
@@ -57,7 +57,7 @@ const Join = () => {
           <Input type="password" value={isPassword} onChange={e => setPassword(e.target.value)} placeholder="비밀번호를 입력해주세요."/>
         </div>
 
-        <Button onClick={createUser} bgColor="#2b2861">Confirm</Button>
+        <Button onClick={onCreateUser} bgColor="#2b2861">Confirm</Button>
         <Button onClick={() => navigate('/login')} bgColor="#bbb">Cancel</Button>
       </div>
     </Layout>

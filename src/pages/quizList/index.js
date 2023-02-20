@@ -18,7 +18,7 @@ const QuizList = () => {
     navigate(`/quiz/${category}`)
   }
 
-  const logout = () => {
+  const onLogout = () => {
     if (window.confirm('로그아웃 하시겠습니까?')) {
       dispatch(handleLogout)
       navigate('/login')
@@ -44,7 +44,7 @@ const QuizList = () => {
       <Button onClick={() => navigate('/quizCreate')} bgColor="#2b2861">Create new vocabulary</Button>
       <div className="btn-area">
         <Button onClick={() => navigate('/mypage')} bgColor="#bbb">My page</Button>
-        <Button onClick={logout} bgColor="#bbb">Logout</Button>
+        <Button onClick={onLogout} bgColor="#bbb">Logout</Button>
       </div>
     </Layout>
   )
