@@ -1,5 +1,6 @@
 import {useNavigate} from 'react-router'
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
+import {handleLogout} from '../../redux/user'
 import Button from '../../components/Button'
 import Layout from '../../components/Layout'
 import Title from '../../components/Title'
@@ -7,6 +8,7 @@ import './index.scss'
 
 const QuizList = () => {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const category = new Set(vocabulary.map((list, index) => list.category))
@@ -14,6 +16,15 @@ const QuizList = () => {
 
   const handleDetailNavigate = (category) => {
     navigate(`/quiz/${category}`)
+  }
+
+  const logout = () => {
+    if (window.confirm('로그아웃 하시겠습니까?')) {
+      dispatch(handleLogout)
+      navigate('/login')
+    } else {
+      return false
+    }
   }
 
   return (
@@ -30,7 +41,11 @@ const QuizList = () => {
         }
       </ul>
 
-      <Button onClick={() => navigate('/quizCreate')} bgColor="#ecdc6d">Create new vocabulary</Button>
+      <Button onClick={() => navigate('/quizCreate')} bgColor="#2b2861">Create new vocabulary</Button>
+      <div className="btn-area">
+        <Button onClick={() => navigate('/mypage')} bgColor="#bbb">My page</Button>
+        <Button onClick={logout} bgColor="#bbb">Logout</Button>
+      </div>
     </Layout>
   )
 }
