@@ -10,20 +10,22 @@ import './index.scss'
 
 const Login = () => {
   const [isLoginId, setLoginId] = useState('')
-  const [isLoginPw, setLoginPw] = useState('')
+  const [isLoginPassword, setLoginPassword] = useState('')
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const users = useSelector(state => state.user.users)
   const loginUser = useSelector(state => state.user.loginUser)
 
+  console.log(users)
+
   const onLogin = () => {
     const userId = users.filter(user => user.loginId === isLoginId)
-    const userPw = users.filter(user => user.loginPw === isLoginPw)
+    const userPw = users.filter(user => user.loginPassword === isLoginPassword)
 
     if (isLoginId === '') {
       alert('아이디를 입력해주세요.')
-    } else if (isLoginPw === '') {
+    } else if (isLoginPassword === '') {
       alert('비밀번호를 입력해주세요.')
     } else if (userId.length === 0) {
       alert('아이디가 틀렸습니다.')
@@ -32,7 +34,7 @@ const Login = () => {
     } else {
       dispatch(handleLogin({
         loginId: isLoginId,
-        loginPw: isLoginPw
+        loginPassword: isLoginPassword
       }))
       alert('로그인 되었습니다.')
       navigate('/quizList')
@@ -51,7 +53,7 @@ const Login = () => {
 
         <div>
           <p>Password</p>
-          <Input type="password" value={isLoginPw} onChange={e => setLoginPw(e.target.value)} placeholder="비밀번호를 입력해주세요."/>
+          <Input type="password" value={isLoginPassword} onChange={e => setLoginPassword(e.target.value)} placeholder="비밀번호를 입력해주세요."/>
         </div>
 
         <Button onClick={onLogin} bgColor="#2b2861">Login</Button>

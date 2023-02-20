@@ -11,21 +11,13 @@ export const userSlice = createSlice({
 
   reducers: {
     handleLogin: (state, action) => {
-      state.loginUser = state.users.find(user => user.loginId === action.payload.loginId && user.loginPw === action.payload.loginPw)
+      state.loginUser = state.users.find(user => user.loginId === action.payload.loginId && user.loginPassword === action.payload.loginPassword)
     },
     handleLogout: (state, action) => {
       state.loginUser = null
     },
     handelCreateUser: (state, action) => {
       state.users = [action.payload, ...state.users]
-    },
-    handleQuizRecord: (state, action) => {
-      state.loginUser.quizRecord.push(action.payload)
-
-      state.users = [
-        ...state.users.filter(user => user.name !== state.loginUser.name),
-        state.loginUser
-      ]
     }
   }
 })
