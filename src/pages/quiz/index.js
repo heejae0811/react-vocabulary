@@ -1,9 +1,10 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
+import {handelQuizRecord} from '../../redux/user'
 import {handleSelectedVocabulary} from '../../redux/vocabulary'
 import Layout from '../../components/Layout'
-import Question from './Question'
+import Answer from './Answer'
 import Result from './Result'
 import './index.scss'
 
@@ -17,12 +18,24 @@ const Quiz = () => {
 
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
+  const user = useSelector(state => state.user)
+
+  // console.log(selectedVocabulary)
+  // console.log(record)
+  console.log(user)
 
   useEffect(() => {
     if (params.category && vocabulary.filter(category => category.category === params.category)) {
       dispatch(handleSelectedVocabulary(params.category))
     }
   }, [])
+
+  // useEffect(() => {
+  //   dispatch(handelQuizRecord({
+  //     type: 'time',
+  //     time: new Date().toLocaleString()
+  //   }))
+  // }, [])
 
   if (!selectedVocabulary) return null
 
@@ -38,7 +51,7 @@ const Quiz = () => {
       {
         selectedVocabulary.map((question, index) => {
           return (
-            <Question
+            <Answer
               key={index}
               className={`${index === activeQuestion ? 'active' : ''}`}
               question={question}
@@ -57,6 +70,7 @@ const Quiz = () => {
       {
         selectedVocabulary.length === activeQuestion && (
           <Result
+            category={params.category}
             record={record}
             koreaAnswer={koreaAnswer}
           />

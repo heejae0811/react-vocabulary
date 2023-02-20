@@ -18,9 +18,17 @@ export const userSlice = createSlice({
     },
     handelCreateUser: (state, action) => {
       state.users = [action.payload, ...state.users]
+    },
+    handelQuizRecord: (state, action) => {
+      state.loginUser.quizRecord.push(action.payload)
+
+      state.users = [
+        ...state.users.filter(user => user.name !== state.loginUser.name),
+        state.loginUser
+      ]
     }
   }
 })
 
-export const {handleLogin, handleLogout, handelCreateUser, handleQuizRecord} = userSlice.actions
+export const {handleLogin, handleLogout, handelCreateUser, handelQuizRecord} = userSlice.actions
 export default userSlice.reducer

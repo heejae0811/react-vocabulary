@@ -45,12 +45,12 @@ const Login = () => {
       <div className="input-area">
         <div>
           <p>ID</p>
-          <Input type="text" value={isLoginId} onChange={e => setLoginId(e.target.value)} placeholder="아이디를 입력해주세요."/>
+          <Input type="text" value={isLoginId} onChange={e => setLoginId(e.target.value)} placeholder="아이디를 입력해주세요. (test)"/>
         </div>
 
         <div>
           <p>Password</p>
-          <Input type="password" value={isLoginPassword} onChange={e => setLoginPassword(e.target.value)} placeholder="비밀번호를 입력해주세요."/>
+          <Input type="password" value={isLoginPassword} onChange={e => setLoginPassword(e.target.value)} placeholder="비밀번호를 입력해주세요. (123)"/>
         </div>
 
         <Button onClick={onLogin} bgColor="#2b2861">Login</Button>

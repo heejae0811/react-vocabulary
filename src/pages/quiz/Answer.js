@@ -3,17 +3,14 @@ import Title from '../../components/Title'
 import Input from '../../components/Input'
 
 
-const Question = props => {
+const Answer = props => {
   const {className, question, length, activeQuestion, setActiveQuestion, answer, setAnswer, record, setRecord} = props
 
   const handelQuestionClick = () => {
     setActiveQuestion(activeQuestion + 1)
-
     setRecord(record => [...record, answer])
     setAnswer('')
   }
-
-  console.log(record)
 
   return (
     <div className={`question ${className}`}>
@@ -30,4 +27,4 @@ const Question = props => {
   )
 }
 
-export default Question
+export default Answer

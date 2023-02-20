@@ -33,6 +33,16 @@ body {
     border-radius: 15px;
     box-shadow: 10px 10px 15px #000;
   }
+
+  .scroll {
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #ddd;
+    }
+  }
 }
 
 @media screen and (max-width: 720px) {

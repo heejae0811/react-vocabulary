@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
-import {handleLogout} from '../../redux/user'
+import {handleLogout, handelQuizRecord} from '../../redux/user'
 import Button from '../../components/Button'
 import Layout from '../../components/Layout'
 import Title from '../../components/Title'

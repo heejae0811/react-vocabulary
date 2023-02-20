@@ -14,10 +14,6 @@ export const vocabularySlice = createSlice({
       state.selectedVocabulary = state.vocabulary.filter(vocabulary => vocabulary.category === action.payload)
     },
     handleCreateVocabulary: (state, action) => {
-
-    },
-    handleQuizAnswer: (state, action) => {
-
     }
   }
 })

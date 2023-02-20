@@ -1,18 +1,32 @@
 import {useNavigate} from 'react-router'
 import Button from '../../components/Button'
 import Title from '../../components/Title'
+import {handelQuizRecord} from '../../redux/user'
+import {useDispatch} from 'react-redux'
 
 const Result = props => {
-  const {record, koreaAnswer} = props
+  const {category, record, koreaAnswer} = props
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const correctAnswer = record.filter(list => koreaAnswer.includes(list))
   const wrongAnswer = record.filter(list => !koreaAnswer.includes(list))
 
+  const handleBeforeNavigate = () => {
+    dispatch(handelQuizRecord({
+      category: category,
+      correctAnswer: correctAnswer.length,
+      wrongAnswer: wrongAnswer.length,
+      time: new Date().toLocaleString()
+    }))
+
+    navigate(-1)
+  }
+
   return (
     <div className="result">
-      <Title>Finish your quiz</Title>
+      <Title>Result your quiz</Title>
 
       <ul>
         <li>
@@ -29,7 +43,7 @@ const Result = props => {
         </li>
       </ul>
 
-      <Button onClick={() => navigate(-1)} bgColor="#2b2861">Again quiz</Button>
+      <Button onClick={handleBeforeNavigate} bgColor="#2b2861">Again quiz</Button>
     </div>
   )
 }
