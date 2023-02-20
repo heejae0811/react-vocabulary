@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
-import {handelQuizRecord} from '../../redux/user'
 import {handleSelectedVocabulary} from '../../redux/vocabulary'
 import Layout from '../../components/Layout'
 import Answer from './Answer'
@@ -20,22 +19,11 @@ const Quiz = () => {
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
   const user = useSelector(state => state.user)
 
-  // console.log(selectedVocabulary)
-  // console.log(record)
-  console.log(user)
-
   useEffect(() => {
     if (params.category && vocabulary.filter(category => category.category === params.category)) {
       dispatch(handleSelectedVocabulary(params.category))
     }
   }, [])
-
-  // useEffect(() => {
-  //   dispatch(handelQuizRecord({
-  //     type: 'time',
-  //     time: new Date().toLocaleString()
-  //   }))
-  // }, [])
 
   if (!selectedVocabulary) return null
 

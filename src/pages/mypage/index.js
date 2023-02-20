@@ -34,7 +34,7 @@ const MyPage = () => {
           loginUser.quizRecord.map((record, index) => {
             return (
               <li>
-                <p>카테고리 {record.category}</p>
+                <p>카테고리 | {record.category}</p>
                 <p>퀴즈 푼 시간 | {record.time}</p>
                 <p>정답 | {record.correctAnswer}개</p>
                 <p>오답 | {record.wrongAnswer}개</p>
@@ -44,7 +44,7 @@ const MyPage = () => {
         }
       </ul>
 
-      <Button onClick={() => navigate('/quizList')} bgColor="#2b2861">Quiz List</Button>
+      <Button onClick={() => navigate('/quizList')} bgColor="#e5cd5e">Quiz List</Button>
     </Layout>
   )
 }

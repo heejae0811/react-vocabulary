@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
-import {handleLogout, handelQuizRecord} from '../../redux/user'
+import {handleLogout} from '../../redux/user'
 import Button from '../../components/Button'
 import Layout from '../../components/Layout'
 import Title from '../../components/Title'
@@ -41,7 +41,7 @@ const QuizList = () => {
         }
       </ul>
 
-      <Button onClick={() => navigate('/quizCreate')} bgColor="#2b2861">Create new vocabulary</Button>
+      <Button onClick={() => navigate('/quizCreate')} bgColor="#e5cd5e">Create new vocabulary</Button>
       <div className="btn-area">
         <Button onClick={() => navigate('/mypage')} bgColor="#bbb">My page</Button>
         <Button onClick={onLogout} bgColor="#bbb">Logout</Button>

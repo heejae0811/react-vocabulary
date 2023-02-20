@@ -8,7 +8,7 @@ const Error = () => {
 
   return (
     <Layout className="Error">
-      <Title>You should login.</Title>
+      <Title>You should login first</Title>
       <Button onClick={() => navigate('/login')} bgColor="#2b2861">Go to Login</Button>
     </Layout>
   )

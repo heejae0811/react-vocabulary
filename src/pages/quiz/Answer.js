@@ -22,7 +22,7 @@ const Answer = props => {
 
       <p className="pagination">{activeQuestion + 1} / {length}</p>
 
-      <Button onClick={() => handelQuestionClick()} bgColor="#ecdc6d">Next</Button>
+      <Button onClick={() => handelQuestionClick()} bgColor="#e5cd5e">Next</Button>
     </div>
   )
 }

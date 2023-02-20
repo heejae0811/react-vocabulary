@@ -39,7 +39,7 @@ const Join = () => {
 
   return (
     <Layout className="join">
-      <Title>Make your account</Title>
+      <Title>Make an account</Title>
 
       <div className="input-area">
         <div>

@@ -26,7 +26,7 @@ const Result = props => {
 
   return (
     <div className="result">
-      <Title>Result your quiz</Title>
+      <Title>Result of the quiz</Title>
 
       <ul>
         <li>
@@ -43,7 +43,7 @@ const Result = props => {
         </li>
       </ul>
 
-      <Button onClick={handleBeforeNavigate} bgColor="#2b2861">Again quiz</Button>
+      <Button onClick={handleBeforeNavigate} bgColor="#e5cd5e">Again quiz</Button>
     </div>
   )
 }
