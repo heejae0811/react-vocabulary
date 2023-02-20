@@ -7,16 +7,27 @@ const Result = props => {
 
   const navigate = useNavigate()
 
-  const correctAnswer = record.filter(x => koreaAnswer.includes(x))
-  const wrongAnswer = record.filter(x => !koreaAnswer.includes(x))
+  const correctAnswer = record.filter(list => koreaAnswer.includes(list))
+  const wrongAnswer = record.filter(list => !koreaAnswer.includes(list))
 
   return (
     <div className="result">
       <Title>Finish your quiz</Title>
 
-      <p>총 문제 수: {record.length}</p>
-      <p>정답 갯수: {correctAnswer.length}</p>
-      <p>오답 갯수: {wrongAnswer.length}</p>
+      <ul>
+        <li>
+          <h3>총 문제 수</h3>
+          <p>{record.length}</p>
+        </li>
+        <li>
+          <h3>정답 갯수</h3>
+          <p>{correctAnswer.length}</p>
+        </li>
+        <li>
+          <h3>오답 갯수</h3>
+          <p>{wrongAnswer.length}</p>
+        </li>
+      </ul>
 
       <Button onClick={() => navigate(-1)} bgColor="#2b2861">Again quiz</Button>
     </div>

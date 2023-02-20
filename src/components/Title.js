@@ -4,7 +4,7 @@ const StyledTitle = styled.h1`
   margin: 0 auto 50px;
   color: #fff;
   font-family: 'Raleway', 'Noto Sans KR', sans-serif;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 500;
   text-align: center;
   line-height: 1;

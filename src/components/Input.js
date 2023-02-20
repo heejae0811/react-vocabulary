@@ -11,7 +11,7 @@ const StyledInput = styled.input`
   border-bottom: 2px solid #000;
   color: #fff;
   font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   
   &::placeholder {
     color: #bbb;

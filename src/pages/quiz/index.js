@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {useParams, useNavigate} from 'react-router'
+import {useParams} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
 import {handleSelectedVocabulary} from '../../redux/vocabulary'
 import Layout from '../../components/Layout'
@@ -17,10 +17,6 @@ const Quiz = () => {
 
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
-  const koreaAnswer = selectedVocabulary.map(answer => answer.korea)
-  const vocabularyLength = selectedVocabulary.length
-
-  console.log(selectedVocabulary.map(answer => answer.korea))
 
   useEffect(() => {
     if (params.category && vocabulary.filter(category => category.category === params.category)) {
@@ -29,6 +25,23 @@ const Quiz = () => {
   }, [])
 
   if (!selectedVocabulary) return null
+
+  const shuffle = (array) => {
+    array.sort(() => Math.random() - 0.5)
+  }
+
+
+  const koreaAnswer = selectedVocabulary.map(answer => answer.korea)
+  const vocabularyLength = selectedVocabulary.length
+
+  // const shuffleAnswer = shuffle(koreaAnswer)
+  // const shuffleVocabulary = shuffle(selectedVocabulary)
+
+  console.log(shuffle(koreaAnswer))
+  console.log('1', koreaAnswer)
+  // console.log(shuffleVocabulary)
+
+
 
   return (
     <Layout>

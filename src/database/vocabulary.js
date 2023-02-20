@@ -45,13 +45,58 @@ export const vocabulary = [
     korea: '원숭이'
   },
   {
+    category: '동물',
+    english: 'snake',
+    korea: '뱀'
+  },
+  {
     category: '과일',
     english: 'apple',
     korea: '사과'
   },
   {
+    category: '과일',
+    english: 'banana',
+    korea: '바나나'
+  },
+  {
+    category: '과일',
+    english: 'pear',
+    korea: '배'
+  },
+  {
+    category: '과일',
+    english: 'tomato',
+    korea: '토마토'
+  },
+  {
+    category: '과일',
+    english: 'orange',
+    korea: '오렌지'
+  },
+  {
     category: '사물',
     english: 'computer',
     korea: '컴퓨터'
+  },
+  {
+    category: '사물',
+    english: 'table',
+    korea: 'desk'
+  },
+  {
+    category: '사물',
+    english: 'chair',
+    korea: '의자'
+  },
+  {
+    category: '사물',
+    english: 'bottle',
+    korea: '병'
+  },
+  {
+    category: '사물',
+    english: 'car',
+    korea: '자동차'
   }
 ]
