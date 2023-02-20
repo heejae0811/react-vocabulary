@@ -20,7 +20,7 @@ const QuizList = () => {
 
   const onLogout = () => {
     if (window.confirm('로그아웃 하시겠습니까?')) {
-      dispatch(handleLogout)
+      dispatch(handleLogout())
       navigate('/login')
     } else {
       return false

@@ -98,5 +98,20 @@ export const vocabulary = [
     category: '사물',
     english: 'car',
     korea: '자동차'
-  }
+  },
+  {
+    category: '직업',
+    english: 'doctor',
+    korea: '의사'
+  },
+  {
+    category: '직업',
+    english: 'developer',
+    korea: '개발자'
+  },
+  {
+    category: '직업',
+    english: 'teacher',
+    korea: '선생님'
+  },
 ]

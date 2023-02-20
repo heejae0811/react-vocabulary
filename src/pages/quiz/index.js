@@ -26,22 +26,12 @@ const Quiz = () => {
 
   if (!selectedVocabulary) return null
 
-  const shuffle = (array) => {
-    array.sort(() => Math.random() - 0.5)
-  }
-
-
   const koreaAnswer = selectedVocabulary.map(answer => answer.korea)
   const vocabularyLength = selectedVocabulary.length
 
-  // const shuffleAnswer = shuffle(koreaAnswer)
-  // const shuffleVocabulary = shuffle(selectedVocabulary)
-
-  console.log(shuffle(koreaAnswer))
-  console.log('1', koreaAnswer)
-  // console.log(shuffleVocabulary)
-
-
+  // const shuffle = (array) => {
+  //   array.sort(() => Math.random() - 0.5)
+  // }
 
   return (
     <Layout>
