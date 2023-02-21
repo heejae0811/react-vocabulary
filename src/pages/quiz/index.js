@@ -17,7 +17,6 @@ const Quiz = () => {
 
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
-  const user = useSelector(state => state.user)
 
   useEffect(() => {
     if (params.category && vocabulary.filter(category => category.category === params.category)) {

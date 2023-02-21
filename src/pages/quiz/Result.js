@@ -43,7 +43,7 @@ const Result = props => {
         </li>
       </ul>
 
-      <Button onClick={handleBeforeNavigate} bgColor="#e5cd5e">Again quiz</Button>
+      <Button onClick={() => handleBeforeNavigate()} bgColor="#e5cd5e">Again quiz</Button>
     </div>
   )
 }

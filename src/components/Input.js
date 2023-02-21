@@ -42,6 +42,7 @@ const Input = forwardRef((props, ref) => {
         readOnly={props.readOnly}
         disabled={props.disabled}
         onChange={props.onChange}
+        onKeyPress={props.onKeyPress}
         onBlur={props.onBlur || null}
       />
     </label>

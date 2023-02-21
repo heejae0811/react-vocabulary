@@ -31,9 +31,9 @@ const MyPage = () => {
 
       <ul className="record scroll">
         {
-          loginUser.quizRecord.map((record, index) => {
+          loginUser.quizRecord && loginUser.quizRecord.map((record, index) => {
             return (
-              <li>
+              <li key={index}>
                 <p>카테고리 | {record.category}</p>
                 <p>퀴즈 푼 시간 | {record.time}</p>
                 <p>정답 | {record.correctAnswer}개</p>

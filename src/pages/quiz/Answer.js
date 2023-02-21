@@ -12,13 +12,19 @@ const Answer = props => {
     setAnswer('')
   }
 
+  const handelEnter = (e) => {
+    if (e.key === 'Enter') {
+      handelQuestionClick()
+    }
+  }
+
   return (
     <div className={`question ${className}`}>
       <Title>Let's start vocabulary quiz</Title>
 
       <h2>{question.english}</h2>
 
-      <Input type="text" value={answer} onChange={e => setAnswer(e.target.value)} placeholder="뜻을 입력해주세요."/>
+      <Input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyPress={handelEnter} placeholder="뜻을 입력해주세요." autoFocus/>
 
       <p className="pagination">{activeQuestion + 1} / {length}</p>
 
