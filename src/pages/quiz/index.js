@@ -26,17 +26,19 @@ const Quiz = () => {
 
   if (!selectedVocabulary) return null
 
+  const shuffle = (array) => {
+    return array.sort(() => Math.random() - 0.5)
+  }
+
   const koreaAnswer = selectedVocabulary.map(answer => answer.korea)
   const vocabularyLength = selectedVocabulary.length
-
-  // const shuffle = (array) => {
-  //   array.sort(() => Math.random() - 0.5)
-  // }
+  const shuffleArr = [...selectedVocabulary]
+  const shuffleVocabulary = shuffle(shuffleArr)
 
   return (
     <Layout>
       {
-        selectedVocabulary.map((question, index) => {
+        shuffleVocabulary.map((question, index) => {
           return (
             <Answer
               key={index}
@@ -55,7 +57,7 @@ const Quiz = () => {
       }
 
       {
-        selectedVocabulary.length === activeQuestion && (
+        shuffleVocabulary.length === activeQuestion && (
           <Result
             category={params.category}
             record={record}

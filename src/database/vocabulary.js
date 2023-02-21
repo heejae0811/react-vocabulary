@@ -82,7 +82,7 @@ export const vocabulary = [
   {
     category: '사물',
     english: 'table',
-    korea: 'desk'
+    korea: '책상'
   },
   {
     category: '사물',
