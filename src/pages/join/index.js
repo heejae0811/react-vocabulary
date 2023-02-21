@@ -1,7 +1,7 @@
-import {useState} from 'react'
 import {useNavigate} from 'react-router'
 import {useDispatch} from 'react-redux'
 import {handelCreateUser} from '../../redux/user'
+import useInput from '../../hooks/useInput'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
 import Layout from '../../components/Layout'
@@ -9,31 +9,37 @@ import Title from '../../components/Title'
 import './index.scss'
 
 const Join = () => {
-  const [isName, setName] = useState('')
-  const [isId, setId] = useState('')
-  const [isPassword, setPassword] = useState('')
+  const userName = useInput()
+  const userId = useInput()
+  const userPassword = useInput()
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const onCreateUser = () => {
-    if (isName === '') {
+    if (userName.value === '') {
       alert('이름을 입력해주세요.')
-    } else if (isId === '') {
+    } else if (userId.value === '') {
       alert('아이디를 입력해주세요.')
-    } else if (isPassword === '') {
+    } else if (userPassword.value === '') {
       alert('비밀번호를 입력해주세요.')
     } else {
       if (window.confirm('회원가입을 하시겠습니까?')) {
         dispatch(handelCreateUser({
-          name: isName,
-          loginId: isId,
-          loginPassword: isPassword
+          name: userName.value,
+          loginId: userId.value,
+          loginPassword: userPassword.value
         }))
         navigate('/login')
       } else {
         return false
       }
+    }
+  }
+
+  const handelEnter = (e) => {
+    if (e.key === 'Enter') {
+      onCreateUser()
     }
   }
 
@@ -44,17 +50,17 @@ const Join = () => {
       <div className="input-area">
         <div>
           <p>Name</p>
-          <Input type="text" value={isName} onChange={e => setName(e.target.value)} placeholder="이름을 입력해주세요."/>
+          <Input type="text" onKeyPress={handelEnter} placeholder="이름을 입력해주세요." {...userName}/>
         </div>
 
         <div>
           <p>ID</p>
-          <Input type="text" value={isId} onChange={e => setId(e.target.value)} placeholder="아이디를 입력해주세요."/>
+          <Input type="text" onKeyPress={handelEnter} placeholder="아이디를 입력해주세요." {...userId}/>
         </div>
 
         <div>
           <p>Password</p>
-          <Input type="password" value={isPassword} onChange={e => setPassword(e.target.value)} placeholder="비밀번호를 입력해주세요."/>
+          <Input type="password" onKeyPress={handelEnter} placeholder="비밀번호를 입력해주세요." {...userPassword}/>
         </div>
 
         <Button onClick={onCreateUser} bgColor="#2b2861">Confirm</Button>
