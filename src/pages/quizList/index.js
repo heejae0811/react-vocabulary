@@ -8,24 +8,8 @@ import './index.scss'
 
 const QuizList = () => {
   const navigate = useNavigate()
-  const dispatch = useDispatch()
 
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
-  const category = new Set(vocabulary.map((list, index) => list.category))
-  const vocabularyCategory = [...category]
-
-  const onDetailNavigate = (category) => {
-    navigate(`/quiz/${category}`)
-  }
-
-  const onLogout = () => {
-    if (window.confirm('로그아웃 하시겠습니까?')) {
-      dispatch(handleLogout())
-      navigate('/login')
-    } else {
-      return false
-    }
-  }
 
   return (
     <Layout className="quiz-list">
@@ -33,19 +17,19 @@ const QuizList = () => {
 
       <ul className="scroll">
         {
-          vocabularyCategory.map((category, index) => {
+          vocabulary.map((list, index) => {
             return (
-              <li key={index} onClick={() => onDetailNavigate(category)}>{category}</li>
+              <li key={index}>
+                <p>{list.category}</p>
+                <p>{list.english}</p>
+                <p>{list.korean}</p>
+              </li>
             )
           })
         }
       </ul>
 
-      <Button onClick={() => navigate('/quizCreate')} bgColor="#e5cd5e">Create new vocabulary</Button>
-      <div className="btn-area">
-        <Button onClick={() => navigate('/mypage')} bgColor="#bbb">My page</Button>
-        <Button onClick={onLogout} bgColor="#bbb">Logout</Button>
-      </div>
+      <Button onClick={() => navigate('/category')} bgColor="#e5cd5e">Category</Button>
     </Layout>
   )
 }

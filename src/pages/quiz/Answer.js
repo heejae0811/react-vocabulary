@@ -1,13 +1,13 @@
 import Button from '../../components/Button'
-import Title from '../../components/Title'
 import Input from '../../components/Input'
+import Title from '../../components/Title'
 
 const Answer = props => {
-  const {className, question, length, activeQuestion, setActiveQuestion, answer, setAnswer, record, setRecord} = props
+  const {className, answer, length, isAnswer, setAnswer, isRecord, setRecord, activeQuestion, setActiveQuestion} = props
 
   const onNextQuiz = () => {
     setActiveQuestion(activeQuestion + 1)
-    setRecord(record => [...record, answer])
+    setRecord(isRecord => [...isRecord, isAnswer])
     setAnswer('')
   }
 
@@ -21,9 +21,9 @@ const Answer = props => {
     <div className={`question ${className}`}>
       <Title>Let's start vocabulary quiz</Title>
 
-      <h2>{question.english}</h2>
+      <h2>{answer.english}</h2>
 
-      <Input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyPress={onEnter} placeholder="뜻을 입력해주세요." autoFocus/>
+      <Input type="text" value={isAnswer} onChange={e => setAnswer(e.target.value)} onKeyPress={onEnter} placeholder="뜻을 입력해주세요." autoFocus/>
 
       <p className="pagination">{activeQuestion + 1} / {length}</p>
 

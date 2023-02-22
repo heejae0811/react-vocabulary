@@ -30,7 +30,7 @@ const QuizCreate = () => {
           english: vocabularyEnglish.value,
           korean: vocabularyKorean.value
         }))
-        navigate('/quizList')
+        navigate('/category')
       } else {
         return false
       }
@@ -64,7 +64,7 @@ const QuizCreate = () => {
         </div>
 
         <Button onClick={() => onCreateVocabulary()} bgColor="#2b2861">Confirm</Button>
-        <Button onClick={() => navigate('/quizList')} bgColor="#bbb">Cancel</Button>
+        <Button onClick={() => navigate('/category')} bgColor="#bbb">Cancel</Button>
       </div>
     </Layout>
   )

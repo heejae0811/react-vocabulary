@@ -5,13 +5,13 @@ import Button from '../../components/Button'
 import Title from '../../components/Title'
 
 const Result = props => {
-  const {category, record, koreanAnswer} = props
+  const {category, koreanAnswer, isRecord} = props
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
-  const correctAnswer = record.filter(list => koreanAnswer.includes(list))
-  const wrongAnswer = record.filter(list => !koreanAnswer.includes(list))
+  const correctAnswer = isRecord.filter(list => koreanAnswer.includes(list))
+  const wrongAnswer = isRecord.filter(list => !koreanAnswer.includes(list))
 
   const onSaveQuiz = () => {
     dispatch(handelQuizRecord({
@@ -21,7 +21,7 @@ const Result = props => {
       time: new Date().toLocaleString()
     }))
 
-    navigate('/quizList')
+    navigate('/category')
   }
 
   return (
@@ -31,7 +31,7 @@ const Result = props => {
       <ul>
         <li>
           <h3>총 문제 수</h3>
-          <p>{record.length}</p>
+          <p>{isRecord.length}</p>
         </li>
         <li>
           <h3>정답 갯수</h3>

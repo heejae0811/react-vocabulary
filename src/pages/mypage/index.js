@@ -44,7 +44,7 @@ const MyPage = () => {
         }
       </ul>
 
-      <Button onClick={() => navigate('/quizList')} bgColor="#e5cd5e">Quiz List</Button>
+      <Button onClick={() => navigate('/category')} bgColor="#e5cd5e">Category</Button>
     </Layout>
   )
 }

@@ -8,8 +8,8 @@ import Result from './Result'
 import './index.scss'
 
 const Quiz = () => {
-  const [answer, setAnswer] = useState('')
-  const [record, setRecord] = useState([])
+  const [isAnswer, setAnswer] = useState('')
+  const [isRecord, setRecord] = useState([])
   const [activeQuestion, setActiveQuestion] = useState(0)
 
   const params = useParams()
@@ -26,22 +26,25 @@ const Quiz = () => {
 
   if (!selectedVocabulary) return null
 
-  const koreanAnswer = selectedVocabulary.map(answer => answer.korean)
+  const koreanAnswer = selectedVocabulary.map(list => list.korean)
   const vocabularyLength = selectedVocabulary.length
+
+  console.log(koreanAnswer)
+  console.log(isRecord)
 
   return (
     <Layout>
       {
-        selectedVocabulary.map((question, index) => {
+        selectedVocabulary.map((answer, index) => {
           return (
             <Answer
               key={index}
               className={`${index === activeQuestion ? 'active' : ''}`}
-              question={question}
-              length={vocabularyLength}
               answer={answer}
+              length={vocabularyLength}
+              isAnswer={isAnswer}
               setAnswer={setAnswer}
-              record={record}
+              isRecord={isRecord}
               setRecord={setRecord}
               activeQuestion={activeQuestion}
               setActiveQuestion={setActiveQuestion}
@@ -54,8 +57,8 @@ const Quiz = () => {
         selectedVocabulary.length === activeQuestion && (
           <Result
             category={params.category}
-            record={record}
             koreanAnswer={koreanAnswer}
+            isRecord={isRecord}
           />
         )
       }
