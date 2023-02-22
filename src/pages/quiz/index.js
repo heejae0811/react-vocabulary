@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
-import {handleSelectedVocabulary} from '../../redux/vocabulary'
+import {handleSelecteVocabulary} from '../../redux/vocabulary'
 import Layout from '../../components/Layout'
 import Answer from './Answer'
 import Result from './Result'
@@ -20,7 +20,7 @@ const Quiz = () => {
 
   useEffect(() => {
     if (params.category && vocabulary.filter(category => category.category === params.category)) {
-      dispatch(handleSelectedVocabulary(params.category))
+      dispatch(handleSelecteVocabulary(params.category))
     }
   }, [])
 
@@ -28,9 +28,6 @@ const Quiz = () => {
 
   const koreanAnswer = selectedVocabulary.map(list => list.korean)
   const vocabularyLength = selectedVocabulary.length
-
-  console.log(koreanAnswer)
-  console.log(isRecord)
 
   return (
     <Layout>

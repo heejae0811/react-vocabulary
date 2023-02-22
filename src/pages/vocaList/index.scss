@@ -1,0 +1,27 @@
+.voca-list {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow-y: scroll;
+    max-height: 320px;
+    margin: 20px 0;
+
+    li {
+      padding: 20px;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      color: #fff;
+
+      p {
+        margin: 5px 0;
+      }
+
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+}

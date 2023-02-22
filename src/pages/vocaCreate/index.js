@@ -8,7 +8,7 @@ import Layout from '../../components/Layout'
 import Title from '../../components/Title'
 import './index.scss'
 
-const QuizCreate = () => {
+const VocaCreate = () => {
   const vocabularyCategory = useInput()
   const vocabularyEnglish = useInput()
   const vocabularyKorean = useInput()
@@ -44,8 +44,8 @@ const QuizCreate = () => {
   }
 
   return (
-    <Layout className="quiz-create">
-      <Title>Make new vocabulary</Title>
+    <Layout className="voca-create">
+      <Title>Create new vocabulary</Title>
 
       <div className="input-area">
         <div>
@@ -70,4 +70,4 @@ const QuizCreate = () => {
   )
 }
 
-export default QuizCreate
+export default VocaCreate

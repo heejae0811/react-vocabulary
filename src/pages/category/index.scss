@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-height: 394px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     overflow-y: scroll;
 
     li {
@@ -25,12 +25,15 @@
     }
   }
 
+  button {
+    margin-top: 10px;
+  }
+
   .btn-area {
     display: flex;
     justify-content: space-between;
     align-items: start;
     gap: 10px;
-    margin-top: 10px;
   }
 }
 

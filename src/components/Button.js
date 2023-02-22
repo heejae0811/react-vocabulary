@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledButton = styled.button`
   width: 100%;
-  height: 50px;
+  height: ${(props) => props.height || '50px'};
   background-color: ${props => props.bgColor};
   outline: none;
   border: none;
