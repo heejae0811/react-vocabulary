@@ -16,6 +16,10 @@ const StyledInput = styled.input`
   &::placeholder {
     color: #bbb;
   }
+
+  @media screen and (max-width: 720px) {
+    font-size: 13px;
+  }
 `
 
 const Input = forwardRef((props, ref) => {

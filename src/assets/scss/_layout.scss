@@ -48,7 +48,8 @@ body {
 @media screen and (max-width: 720px) {
   body {
     .inner {
-      min-height: fit-content;
+      min-height: auto;
+      height: 80%;
     }
   }
 }

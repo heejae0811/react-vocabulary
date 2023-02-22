@@ -20,6 +20,11 @@ const StyledButton = styled.button`
   &:disabled {
     background-color: #bbb;
   }
+  
+  @media screen and (max-width: 720px) {
+    height: 45px;
+    font-size: 13px;
+  }
 `
 
 const Button = ({disabled, children, ...rest}) => {

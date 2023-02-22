@@ -17,3 +17,18 @@
     }
   }
 }
+
+@media screen and (max-width: 720px) {
+  .quiz-create {
+    .input-area {
+      > div {
+        margin-bottom: 30px;
+
+        p {
+          margin-bottom: 0;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
