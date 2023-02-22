@@ -15,6 +15,7 @@ export const vocabularySlice = createSlice({
       state.selectedVocabulary = selectedArray.sort(() => Math.random() - 0.5)
     },
     handleCreateVocabulary: (state, action) => {
+      state.vocabulary.push(action.payload)
     }
   }
 })

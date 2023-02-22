@@ -37,7 +37,7 @@ const Join = () => {
     }
   }
 
-  const handelEnter = (e) => {
+  const onEnter = (e) => {
     if (e.key === 'Enter') {
       onCreateUser()
     }
@@ -45,22 +45,22 @@ const Join = () => {
 
   return (
     <Layout className="join">
-      <Title>Make an account</Title>
+      <Title>Make your account</Title>
 
       <div className="input-area">
         <div>
           <p>Name</p>
-          <Input type="text" onKeyPress={handelEnter} placeholder="이름을 입력해주세요." {...userName}/>
+          <Input type="text" onKeyPress={onEnter} placeholder="이름을 입력해주세요." {...userName}/>
         </div>
 
         <div>
           <p>ID</p>
-          <Input type="text" onKeyPress={handelEnter} placeholder="아이디를 입력해주세요." {...userId}/>
+          <Input type="text" onKeyPress={onEnter} placeholder="아이디를 입력해주세요." {...userId}/>
         </div>
 
         <div>
           <p>Password</p>
-          <Input type="password" onKeyPress={handelEnter} placeholder="비밀번호를 입력해주세요." {...userPassword}/>
+          <Input type="password" onKeyPress={onEnter} placeholder="비밀번호를 입력해주세요." {...userPassword}/>
         </div>
 
         <Button onClick={onCreateUser} bgColor="#2b2861">Confirm</Button>

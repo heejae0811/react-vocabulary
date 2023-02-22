@@ -26,7 +26,7 @@ const Quiz = () => {
 
   if (!selectedVocabulary) return null
 
-  const koreaAnswer = selectedVocabulary.map(answer => answer.korea)
+  const koreanAnswer = selectedVocabulary.map(answer => answer.korean)
   const vocabularyLength = selectedVocabulary.length
 
   return (
@@ -55,7 +55,7 @@ const Quiz = () => {
           <Result
             category={params.category}
             record={record}
-            koreaAnswer={koreaAnswer}
+            koreanAnswer={koreanAnswer}
           />
         )
       }

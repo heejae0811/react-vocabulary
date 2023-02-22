@@ -1,0 +1,19 @@
+.quiz-create {
+  .input-area {
+    > div {
+      margin-bottom: 50px;
+
+      p {
+        margin-bottom: 10px;
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+
+    button {
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+  }
+}

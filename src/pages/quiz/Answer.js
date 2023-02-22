@@ -2,7 +2,6 @@ import Button from '../../components/Button'
 import Title from '../../components/Title'
 import Input from '../../components/Input'
 
-
 const Answer = props => {
   const {className, question, length, activeQuestion, setActiveQuestion, answer, setAnswer, record, setRecord} = props
 

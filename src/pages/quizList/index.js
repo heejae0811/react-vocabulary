@@ -14,7 +14,9 @@ const QuizList = () => {
   const category = new Set(vocabulary.map((list, index) => list.category))
   const vocabularyCategory = [...category]
 
-  const handleDetailNavigate = (category) => {
+  console.log(vocabulary)
+
+  const onDetailNavigate = (category) => {
     navigate(`/quiz/${category}`)
   }
 
@@ -31,11 +33,11 @@ const QuizList = () => {
     <Layout className="quiz-list">
       <Title>Select vocabulary category</Title>
 
-      <ul>
+      <ul className="scroll">
         {
           vocabularyCategory.map((category, index) => {
             return (
-              <li key={index} onClick={() => handleDetailNavigate(category)}>{category}</li>
+              <li key={index} onClick={() => onDetailNavigate(category)}>{category}</li>
             )
           })
         }
