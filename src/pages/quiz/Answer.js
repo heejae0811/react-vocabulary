@@ -5,15 +5,15 @@ import Input from '../../components/Input'
 const Answer = props => {
   const {className, question, length, activeQuestion, setActiveQuestion, answer, setAnswer, record, setRecord} = props
 
-  const handelQuestionClick = () => {
+  const onNextQuiz = () => {
     setActiveQuestion(activeQuestion + 1)
     setRecord(record => [...record, answer])
     setAnswer('')
   }
 
-  const handelEnter = (e) => {
+  const onEnter = (e) => {
     if (e.key === 'Enter') {
-      handelQuestionClick()
+      onNextQuiz()
     }
   }
 
@@ -23,11 +23,11 @@ const Answer = props => {
 
       <h2>{question.english}</h2>
 
-      <Input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyPress={handelEnter} placeholder="뜻을 입력해주세요." autoFocus/>
+      <Input type="text" value={answer} onChange={e => setAnswer(e.target.value)} onKeyPress={onEnter} placeholder="뜻을 입력해주세요." autoFocus/>
 
       <p className="pagination">{activeQuestion + 1} / {length}</p>
 
-      <Button onClick={() => handelQuestionClick()} bgColor="#e5cd5e">Next</Button>
+      <Button onClick={() => onNextQuiz()} bgColor="#e5cd5e">Next</Button>
     </div>
   )
 }

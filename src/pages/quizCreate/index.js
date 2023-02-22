@@ -2,10 +2,10 @@ import {useNavigate} from 'react-router'
 import {useDispatch} from 'react-redux'
 import {handleCreateVocabulary} from '../../redux/vocabulary'
 import useInput from '../../hooks/useInput'
+import Button from '../../components/Button'
+import Input from '../../components/Input'
 import Layout from '../../components/Layout'
 import Title from '../../components/Title'
-import Input from '../../components/Input'
-import Button from '../../components/Button'
 import './index.scss'
 
 const QuizCreate = () => {
@@ -64,7 +64,7 @@ const QuizCreate = () => {
         </div>
 
         <Button onClick={() => onCreateVocabulary()} bgColor="#2b2861">Confirm</Button>
-        <Button onClick={() => navigate(-1)} bgColor="#bbb">Cancel</Button>
+        <Button onClick={() => navigate('/quizList')} bgColor="#bbb">Cancel</Button>
       </div>
     </Layout>
   )

@@ -14,8 +14,6 @@ const QuizList = () => {
   const category = new Set(vocabulary.map((list, index) => list.category))
   const vocabularyCategory = [...category]
 
-  console.log(vocabulary)
-
   const onDetailNavigate = (category) => {
     navigate(`/quiz/${category}`)
   }
