@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
-import {handleSelecteVocabulary} from '../../redux/vocabulary'
+import {handleSelectVocabulary} from '../../redux/vocabulary'
 import Layout from '../../components/Layout'
 import Answer from './Answer'
 import Result from './Result'
@@ -20,7 +20,7 @@ const Quiz = () => {
 
   useEffect(() => {
     if (params.category && vocabulary.filter(category => category.category === params.category)) {
-      dispatch(handleSelecteVocabulary(params.category))
+      dispatch(handleSelectVocabulary(params.category))
     }
   }, [])
 

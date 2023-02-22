@@ -1,4 +1,4 @@
-.question {
+.answer {
   display: none;
 
   &.active {
@@ -49,7 +49,7 @@
 }
 
 @media screen and (max-width: 720px) {
-  .question {
+  .answer {
     h2 {
       font-size: 42px;
     }

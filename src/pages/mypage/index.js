@@ -11,7 +11,7 @@ const MyPage = () => {
   const loginUser = useSelector(state => state.user.loginUser)
 
   return (
-    <Layout className="myPage">
+    <Layout className="my-page">
       <Title>My page</Title>
 
       <ul className="info">

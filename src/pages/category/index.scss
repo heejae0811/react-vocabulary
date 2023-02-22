@@ -1,4 +1,4 @@
-.quiz-list {
+.category {
   ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -38,7 +38,7 @@
 }
 
 @media screen and (max-width: 720px) {
-  .quiz-list {
+  .category {
     ul {
       max-height: 268px;
 

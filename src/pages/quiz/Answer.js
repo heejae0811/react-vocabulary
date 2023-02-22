@@ -18,7 +18,7 @@ const Answer = props => {
   }
 
   return (
-    <div className={`question ${className}`}>
+    <div className={`answer ${className}`}>
       <Title>Let's start vocabulary quiz</Title>
 
       <h2>{answer.english}</h2>

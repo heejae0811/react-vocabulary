@@ -28,7 +28,7 @@ const Category = () => {
   }
 
   return (
-    <Layout className="quiz-list">
+    <Layout className="category">
       <Title>Select vocabulary category</Title>
 
       <ul className="scroll">
