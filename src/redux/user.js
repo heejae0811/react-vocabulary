@@ -20,7 +20,7 @@ export const userSlice = createSlice({
       state.users = [action.payload, ...state.users]
     },
     handelQuizRecord: (state, action) => {
-      state.loginUser.quizRecord.push(action.payload)
+      state.loginUser.quizRecord.unshift(action.payload)
 
       state.users = [
         ...state.users.filter(user => user.name !== state.loginUser.name),

@@ -11,7 +11,8 @@ export const vocabularySlice = createSlice({
 
   reducers: {
     handleSelectedVocabulary: (state, action) => {
-      state.selectedVocabulary = state.vocabulary.filter(vocabulary => vocabulary.category === action.payload)
+      let selectedArray = state.vocabulary.filter(vocabulary => vocabulary.category === action.payload)
+      state.selectedVocabulary = selectedArray.sort(() => Math.random() - 0.5)
     },
     handleCreateVocabulary: (state, action) => {
     }
