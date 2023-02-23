@@ -7,7 +7,7 @@ import Layout from '../../components/Layout'
 import Title from '../../components/Title'
 import './index.scss'
 
-const Validation = () => {
+const JoinForm = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
@@ -30,11 +30,11 @@ const Validation = () => {
   }
 
   return (
-    <Layout className="validation">
+    <Layout className="join">
       <Title>Join (useForm)</Title>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="validation-form scroll">
+        <div className="join-form scroll">
           <div>
             <h3>ID</h3>
             <input
@@ -110,7 +110,7 @@ const Validation = () => {
           </div>
         </div>
 
-        <div className="validation-form-btn">
+        <div className="join-form-btn">
           <Button type="submit" bgColor="#2b2861">Confirm</Button>
           <Button onClick={() => navigate('/login')} bgColor="#bbb">Cancel</Button>
         </div>
@@ -119,4 +119,4 @@ const Validation = () => {
   )
 }
 
-export default Validation
+export default JoinForm

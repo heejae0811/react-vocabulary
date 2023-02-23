@@ -63,7 +63,7 @@ const Login = () => {
       <div className="login-btn">
         <Button onClick={onLogin} bgColor="#2b2861">Login</Button>
         <Button onClick={() => navigate('/join')} bgColor="#bbb">Easy Join</Button>
-        <Button onClick={() => navigate('/validation')} bgColor="#bbb">Join</Button>
+        <Button onClick={() => navigate('/joinForm')} bgColor="#bbb">Join</Button>
       </div>
     </Layout>
   )
