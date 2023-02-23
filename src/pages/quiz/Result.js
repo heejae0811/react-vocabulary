@@ -30,15 +30,15 @@ const Result = props => {
 
       <ul>
         <li>
-          <h3>총 문제 수</h3>
+          <h3>총 문제</h3>
           <p>{isRecord.length}</p>
         </li>
         <li>
-          <h3>정답 갯수</h3>
+          <h3>정답</h3>
           <p>{correctAnswer.length}</p>
         </li>
         <li>
-          <h3>오답 갯수</h3>
+          <h3>오답</h3>
           <p>{wrongAnswer.length}</p>
         </li>
       </ul>

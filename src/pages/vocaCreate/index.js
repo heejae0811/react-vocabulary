@@ -47,7 +47,7 @@ const VocaCreate = () => {
     <Layout className="voca-create">
       <Title>Create new vocabulary</Title>
 
-      <div className="input-area">
+      <div className="voca-create-input">
         <div>
           <p>Category</p>
           <Input type="text" onKeyPress={onEnter} placeholder="카테고리를 입력해주세요." {...vocabularyCategory}/>
@@ -62,7 +62,9 @@ const VocaCreate = () => {
           <p>Korean</p>
           <Input type="text" onKeyPress={onEnter} placeholder="한글 뜻을 입력해주세요." {...vocabularyKorean}/>
         </div>
+      </div>
 
+      <div className="voca-create-btn">
         <Button onClick={() => onCreateVocabulary()} bgColor="#2b2861">Confirm</Button>
         <Button onClick={() => navigate('/category')} bgColor="#bbb">Cancel</Button>
       </div>

@@ -47,7 +47,7 @@ const Join = () => {
     <Layout className="join">
       <Title>Join (custom hook)</Title>
 
-      <div className="input-area">
+      <div className="join-input">
         <div>
           <p>Name</p>
           <Input type="text" onKeyPress={onEnter} placeholder="이름을 입력해주세요." {...userName} autoFocus/>
@@ -62,7 +62,9 @@ const Join = () => {
           <p>Password</p>
           <Input type="password" onKeyPress={onEnter} placeholder="비밀번호를 입력해주세요." {...userPassword}/>
         </div>
+      </div>
 
+      <div className="join-btn">
         <Button onClick={onCreateUser} bgColor="#2b2861">Confirm</Button>
         <Button onClick={() => navigate('/login')} bgColor="#bbb">Cancel</Button>
       </div>

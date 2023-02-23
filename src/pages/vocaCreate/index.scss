@@ -1,6 +1,6 @@
 .voca-create {
-  .input-area {
-    > div {
+  &-input {
+    div {
       margin-bottom: 50px;
 
       p {
@@ -9,7 +9,9 @@
         font-size: 18px;
       }
     }
+  }
 
+  &-btn {
     button {
       &:last-child {
         margin-top: 10px;
@@ -19,14 +21,14 @@
 }
 
 @media screen and (max-width: 720px) {
-  .quiz-create {
-    .input-area {
-      > div {
+  .voca-create {
+    &-input {
+      div {
         margin-bottom: 30px;
 
         p {
           margin-bottom: 0;
-          font-size: 16px;
+          font-size: 14px;
         }
       }
     }

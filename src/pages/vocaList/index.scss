@@ -5,22 +5,37 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    overflow-y: scroll;
     max-height: 320px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 
     li {
       padding: 20px;
       border: 1px solid #fff;
       border-radius: 10px;
-      color: #fff;
 
       p {
         margin: 5px 0;
+        color: #fff;
+        text-align: center;
       }
 
       button {
         margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .voca-list {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      max-height: 351px;
+      margin-bottom: 10px;
+
+      li {
+        padding: 15px;
       }
     }
   }

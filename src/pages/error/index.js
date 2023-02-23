@@ -7,7 +7,7 @@ const Error = () => {
   const navigate = useNavigate()
 
   return (
-    <Layout className="Error">
+    <Layout>
       <Title>You should login first</Title>
       <Button onClick={() => navigate('/login')} bgColor="#2b2861">Go to Login</Button>
     </Layout>

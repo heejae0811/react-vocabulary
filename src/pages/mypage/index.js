@@ -14,7 +14,7 @@ const MyPage = () => {
     <Layout className="my-page">
       <Title>My page</Title>
 
-      <ul className="info">
+      <ul className="my-page-info">
         <li>
           <h3>Name</h3>
           <p>{loginUser.name}</p>
@@ -29,7 +29,7 @@ const MyPage = () => {
         </li>
       </ul>
 
-      <ul className="record scroll">
+      <ul className="my-page-record scroll">
         {
           loginUser.quizRecord && loginUser.quizRecord.map((record, index) => {
             return (
