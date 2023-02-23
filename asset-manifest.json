@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-vocabulary/static/css/main.ceefda9d.css",
-    "main.js": "/react-vocabulary/static/js/main.b2de6310.js",
+    "main.css": "/react-vocabulary/static/css/main.89634543.css",
+    "main.js": "/react-vocabulary/static/js/main.ff1e0e4e.js",
     "index.html": "/react-vocabulary/index.html",
-    "main.ceefda9d.css.map": "/react-vocabulary/static/css/main.ceefda9d.css.map",
-    "main.b2de6310.js.map": "/react-vocabulary/static/js/main.b2de6310.js.map"
+    "main.89634543.css.map": "/react-vocabulary/static/css/main.89634543.css.map",
+    "main.ff1e0e4e.js.map": "/react-vocabulary/static/js/main.ff1e0e4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ceefda9d.css",
-    "static/js/main.b2de6310.js"
+    "static/css/main.89634543.css",
+    "static/js/main.ff1e0e4e.js"
   ]
 }
