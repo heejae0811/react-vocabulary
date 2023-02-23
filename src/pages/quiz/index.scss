@@ -6,7 +6,6 @@
   }
 
   h2 {
-    color: #fff;
     font-size: 50px;
     font-weight: 700;
     text-align: center;
@@ -16,9 +15,8 @@
     margin: 50px auto 20px;
   }
 
-  .pagination {
+  &-pagination {
     margin-bottom: 50px;
-    color: #fff;
     text-align: center;
   }
 }
@@ -36,7 +34,6 @@
       padding: 30px 0;
       border: 1px solid #fff;
       border-radius: 10px;
-      color: #fff;
       text-align: center;
 
       h3 {
@@ -58,7 +55,7 @@
       margin: 30px auto 20px;
     }
 
-    .pagination {
+    &-pagination {
       margin-bottom: 30px;
     }
   }

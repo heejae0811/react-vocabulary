@@ -20,7 +20,6 @@ const Result = props => {
       wrongAnswer: wrongAnswer.length,
       time: new Date().toLocaleString()
     }))
-
     navigate('/category')
   }
 

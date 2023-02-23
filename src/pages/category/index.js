@@ -11,7 +11,7 @@ const Category = () => {
   const dispatch = useDispatch()
 
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
-  const category = new Set(vocabulary.map((list, index) => list.category))
+  const category = new Set(vocabulary.map(list => list.category))
   const vocabularyCategory = [...category]
 
   const onDetailNavigate = (category) => {

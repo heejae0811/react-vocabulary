@@ -11,6 +11,7 @@ const JoinForm = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
+  // useForm 사용해서 validation 처리
   const {register, handleSubmit, watch, formState: {errors}} = useForm()
   const onSubmit = (data) => {
     // alert(JSON.stringify(data))
