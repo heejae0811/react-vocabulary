@@ -1,0 +1,19 @@
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #000;
+  color: #fff;
+  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+
+  &::placeholder {
+    color: #bbb;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  font-size: 13px;
+}

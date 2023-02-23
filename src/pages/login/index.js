@@ -16,6 +16,8 @@ const Login = () => {
   const dispatch = useDispatch()
   const users = useSelector(state => state.user.users)
 
+  console.log(users)
+
   const onLogin = () => {
     const userId = users.filter(user => user.loginId === loginId.value)
     const userPw = users.filter(user => user.loginPassword === loginPassword.value)
@@ -51,16 +53,19 @@ const Login = () => {
       <div className="input-area">
         <div>
           <p>ID</p>
-          <Input type="text" onKeyPress={onEnter} placeholder="아이디를 입력해주세요. (test)" {...loginId}/>
+          <Input type="text" onKeyPress={onEnter} placeholder="아이디를 입력해주세요. (test)" autoFocus {...loginId}/>
         </div>
 
         <div>
           <p>Password</p>
           <Input type="password" onKeyPress={onEnter} placeholder="비밀번호를 입력해주세요. (123)" {...loginPassword}/>
         </div>
+      </div>
 
+      <div className="btn-area">
         <Button onClick={onLogin} bgColor="#2b2861">Login</Button>
-        <Button onClick={() => navigate('/join')} bgColor="#bbb">Join</Button>
+        <Button onClick={() => navigate('/join')} bgColor="#bbb">Easy Join</Button>
+        <Button onClick={() => navigate('/validation')} bgColor="#bbb">Join</Button>
       </div>
     </Layout>
   )

@@ -1,5 +1,6 @@
 import {Routes, Route} from 'react-router-dom'
 import {useSelector} from 'react-redux'
+import Validation from './pages/validation'
 import Login from './pages/login'
 import Join from './pages/join'
 import MyPage from './pages/mypage'
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Login/>}/>
             <Route path="/react-vocabulary" element={<Login/>}/>
+            <Route path="/validation" element={<Validation/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/join" element={<Join/>}/>
             <Route path="/mypage" element={<MyPage/>}/>
@@ -36,6 +38,7 @@ function App() {
             <Route path="/" element={<Login/>}/>
             <Route path="/react-vocabulary" element={<Login/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/validation" element={<Validation/>}/>
             <Route path="/join" element={<Join/>}/>
             <Route path="/mypage" element={<Error/>}/>
             <Route path="/category" element={<Error/>}/>

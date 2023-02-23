@@ -1,22 +1,24 @@
-.login {
-  .input-area {
-    div {
-      margin-bottom: 50px;
+.validation {
+  form {
+    > div {
+      margin-bottom: 30px;
 
-      p {
+      h3 {
         margin-bottom: 10px;
         color: #fff;
         font-size: 18px;
       }
+
+      p {
+        margin-top: 10px;
+        color: #d20000;
+        font-size: 13px;
+      }
     }
-  }
 
-  .btn-area {
     button {
-      margin-top: 10px;
-
-      &:first-child {
-        margin-top: 0;
+      &:last-child {
+        margin-top: 10px;
       }
     }
   }
@@ -24,7 +26,7 @@
 
 @media screen and (max-width: 720px) {
   .login {
-    .input-area {
+    form {
       > div {
         margin-bottom: 30px;
 

@@ -45,12 +45,12 @@ const Join = () => {
 
   return (
     <Layout className="join">
-      <Title>Make your account</Title>
+      <Title>Join (custom hook)</Title>
 
       <div className="input-area">
         <div>
           <p>Name</p>
-          <Input type="text" onKeyPress={onEnter} placeholder="이름을 입력해주세요." {...userName}/>
+          <Input type="text" onKeyPress={onEnter} placeholder="이름을 입력해주세요." {...userName} autoFocus/>
         </div>
 
         <div>
