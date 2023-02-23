@@ -10,8 +10,8 @@ const Result = props => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
-  const correctAnswer = isRecord.filter(list => koreanAnswer.includes(list))
-  const wrongAnswer = isRecord.filter(list => !koreanAnswer.includes(list))
+  const correctAnswer = isRecord.filter(record => koreanAnswer.includes(record))
+  const wrongAnswer = isRecord.filter(record => !koreanAnswer.includes(record))
 
   const onSaveQuiz = () => {
     dispatch(handelQuizRecord({

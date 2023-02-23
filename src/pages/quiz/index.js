@@ -19,7 +19,7 @@ const Quiz = () => {
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
 
   useEffect(() => {
-    if (params.category && vocabulary.filter(category => category.category === params.category)) {
+    if (params.category && vocabulary.filter(list => list.category === params.category)) {
       dispatch(handleSelectVocabulary(params.category))
     }
   }, [])

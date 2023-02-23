@@ -9,8 +9,11 @@ import './index.scss'
 
 const VocaList = () => {
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
+  const setCategory = new Set(vocabulary.map(list => list.category))
+  const vocabularyCategory = [...setCategory]
 
   const [isSort, setSort] = useState(vocabulary)
+  const [isSelect, setSelect] = useState('')
 
   useEffect(() => {
     if(!vocabulary) {
@@ -35,6 +38,16 @@ const VocaList = () => {
     setSort(koreanList)
   }
 
+  const categorySort = (e) => {
+    setSelect(e.target.value)
+
+    let categoryList = vocabulary.filter(list => list.category === isSelect)
+    setSort(categoryList)
+
+    console.log(isSelect)
+    console.log(categoryList)
+  }
+
   const onDeleteVocabulary = (index) => {
     const deleteVocabulary = vocabulary.map(list => list.english)
     const deletedVocabulary = deleteVocabulary[index]
@@ -55,6 +68,18 @@ const VocaList = () => {
         <ul>
           <li onClick={englishSort}>알파벳순</li>
           <li onClick={koreanSort}>가나다순</li>
+          <li>
+            <select value={isSelect} onChange={categorySort}>
+              {
+                vocabularyCategory.map((category, index) => {
+                  return (
+                    <option key={index+1} value={category}>{category}</option>
+                  )
+                })
+              }
+            </select>
+            <p>{isSelect}</p>
+          </li>
         </ul>
       </div>
 
