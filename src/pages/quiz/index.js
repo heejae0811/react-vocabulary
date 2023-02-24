@@ -17,9 +17,12 @@ const Quiz = () => {
   const [isRecord, setRecord] = useState([])
   const [activeQuestion, setActiveQuestion] = useState(0)
 
+
   // ** Redux States
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
+  const quizList = useSelector(state => state.vocabulary.quizList)
+
 
   useEffect(() => {
     if (params.category && vocabulary.filter(list => list.category === params.category)) {
@@ -29,19 +32,19 @@ const Quiz = () => {
 
   if (!selectedVocabulary) return null
 
-  const koreanAnswer = selectedVocabulary.map(list => list.korean)
-  const vocabularyLength = selectedVocabulary.length
+  const koreanAnswer = quizList
+  const quizLength = quizList.length
 
   return (
     <Layout>
       {
-        selectedVocabulary.map((answer, index) => {
+        quizList.map((quiz, index) => {
           return (
             <Answer
               key={index}
               className={`${index === activeQuestion ? 'active' : ''}`}
-              answer={answer}
-              length={vocabularyLength}
+              quiz={quiz}
+              quizLength={quizLength}
               isAnswer={isAnswer}
               setAnswer={setAnswer}
               isRecord={isRecord}
@@ -54,7 +57,7 @@ const Quiz = () => {
       }
 
       {
-        selectedVocabulary.length === activeQuestion && (
+        quizList.length === activeQuestion && (
           <Result
             category={params.category}
             koreanAnswer={koreanAnswer}

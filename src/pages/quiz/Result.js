@@ -1,5 +1,5 @@
 import {useNavigate} from 'react-router'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {handelQuizRecord} from '../../redux/user'
 import Button from '../../components/Button'
 import Title from '../../components/Title'
@@ -11,8 +11,10 @@ const Result = props => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
+
   const correctAnswer = isRecord.filter(record => koreanAnswer.includes(record))
   const wrongAnswer = isRecord.filter(record => !koreanAnswer.includes(record))
+
 
   const onSaveQuiz = () => {
     dispatch(handelQuizRecord({

@@ -6,13 +6,27 @@ export const vocabularySlice = createSlice({
 
   initialState: {
     vocabulary: database.vocabulary,
-    selectedVocabulary: null
+    selectedVocabulary: null,
+    quizList: null,
+    answerList: null
   },
 
   reducers: {
     handleSelectVocabulary: (state, action) => {
       let selectedArray = state.vocabulary.filter(list => list.category === action.payload)
+
+      let englishVocabulary = selectedArray.map(list => list.english)
+      let koreanVocabulary = selectedArray.map(list => list.korean)
+      let quizList = [...englishVocabulary, ...koreanVocabulary].sort(() => Math.random() - 0.5)
+      // let answerList = quizList
+
       state.selectedVocabulary = selectedArray.sort(() => Math.random() - 0.5)
+      state.quizList = quizList
+      // state.answerVocabulary = answerList
+
+
+      console.log(quizList)
+      // console.log(koreanVocabulary)
     },
     handleCreateVocabulary: (state, action) => {
       state.vocabulary.push(action.payload)
