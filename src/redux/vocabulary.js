@@ -22,11 +22,8 @@ export const vocabularySlice = createSlice({
 
       state.selectedVocabulary = selectedArray.sort(() => Math.random() - 0.5)
       state.quizList = quizList
-      // state.answerVocabulary = answerList
-
 
       console.log(quizList)
-      // console.log(koreanVocabulary)
     },
     handleCreateVocabulary: (state, action) => {
       state.vocabulary.push(action.payload)
