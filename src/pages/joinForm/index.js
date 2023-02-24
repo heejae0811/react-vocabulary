@@ -48,10 +48,10 @@ const JoinForm = () => {
                 maxLength: 10,
                 pattern: /^[A-Za-z]+$/
               })}/>
-            {errors?.loginId?.type === 'required' && <p>아이디는 필수입니다.</p>}
-            {errors?.loginId?.type === 'minLength' && <p>아이디는 2글자 이상입니다.</p>}
-            {errors?.loginId?.type === 'maxLength' && <p>아이디는 10글자 이하입니다.</p>}
-            {errors?.loginId?.type === 'pattern' && <p>아이디는 영어만 가능합니다.</p>}
+            {errors?.loginId?.type === 'required' && <span className="text-danger">아이디는 필수입니다.</span>}
+            {errors?.loginId?.type === 'minLength' && <span className="text-danger">아이디는 2글자 이상입니다.</span>}
+            {errors?.loginId?.type === 'maxLength' && <span className="text-danger">아이디는 10글자 이하입니다.</span>}
+            {errors?.loginId?.type === 'pattern' && <span className="text-danger">아이디는 영어만 가능합니다.</span>}
           </div>
 
           <div>
@@ -65,10 +65,10 @@ const JoinForm = () => {
                 maxLength: 10,
                 pattern: /^[0-9]+$/
               })}/>
-            {errors?.loginPassword?.type === 'required' && <p>비밀번호는 필수입니다.</p>}
-            {errors?.loginPassword?.type === 'minLength' && <p>비밀번호는 2글자 이상입니다.</p>}
-            {errors?.loginPassword?.type === 'maxLength' && <p>비밀번호는 10글자 이하입니다.</p>}
-            {errors?.loginPassword?.type === 'pattern' && <p>비밀번호는 숫자만 가능합니다.</p>}
+            {errors?.loginPassword?.type === 'required' && <span className="text-danger">비밀번호는 필수입니다.</span>}
+            {errors?.loginPassword?.type === 'minLength' && <span className="text-danger">비밀번호는 2글자 이상입니다.</span>}
+            {errors?.loginPassword?.type === 'maxLength' && <span className="text-danger">비밀번호는 10글자 이하입니다.</span>}
+            {errors?.loginPassword?.type === 'pattern' && <span className="text-danger">비밀번호는 숫자만 가능합니다.</span>}
           </div>
 
           <div>
@@ -80,8 +80,8 @@ const JoinForm = () => {
                 required: true,
                 pattern: /^[ㄱ-ㅎ|가-힣]+$/
               })}/>
-            {errors?.name?.type === 'required' && <p>이름은 필수입니다.</p>}
-            {errors?.name?.type === 'pattern' && <p>이름은 한글만 가능합니다.</p>}
+            {errors?.name?.type === 'required' && <span className="text-danger">이름은 필수입니다.</span>}
+            {errors?.name?.type === 'pattern' && <span className="text-danger">이름은 한글만 가능합니다.</span>}
           </div>
 
           <div>
@@ -93,8 +93,8 @@ const JoinForm = () => {
                 required: true,
                 pattern: /^[A-Za-z0-9]+@[A-Za-z0-9.]+$/
               })}/>
-            {errors?.email?.type === 'required' && <p>이메일은 필수입니다.</p>}
-            {errors?.email?.type === 'pattern' && <p>@가 포함된 이메일 형식만 가능합니다.</p>}
+            {errors?.email?.type === 'required' && <span className="text-danger">이메일은 필수입니다.</span>}
+            {errors?.email?.type === 'pattern' && <span className="text-danger">@가 포함된 이메일 형식만 가능합니다.</span>}
           </div>
 
           <div>
@@ -106,8 +106,8 @@ const JoinForm = () => {
                 required: true,
                 pattern: /^\d{2,3}-\d{3,4}-\d{3,4}/i
               })}/>
-            {errors?.phoneNumber?.type === 'required' && <p>전화번호는 필수입니다.</p>}
-            {errors?.phoneNumber?.type === 'pattern' && <p>-가 포함된 전화번호 형식만 가능합니다.</p>}
+            {errors?.phoneNumber?.type === 'required' && <span className="text-danger">전화번호는 필수입니다.</span>}
+            {errors?.phoneNumber?.type === 'pattern' && <span className="text-danger">-가 포함된 전화번호 형식만 가능합니다.</span>}
           </div>
         </div>
 

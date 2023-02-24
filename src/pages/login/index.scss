@@ -1,21 +1,27 @@
 .login {
-  &-input {
+  &-form {
     div {
       margin-bottom: 50px;
 
-      p {
+      h3 {
         margin-bottom: 10px;
         font-size: 18px;
       }
+
+      span {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 13px;
+      }
     }
-  }
 
-  &-btn {
-    button {
-      margin-top: 10px;
+    &-btn {
+      button {
+        margin-top: 10px;
 
-      &:first-child {
-        margin-top: 0;
+        &:first-child {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -23,13 +29,17 @@
 
 @media screen and (max-width: 720px) {
   .login {
-    &-input {
+    &-form {
       div {
         margin-bottom: 30px;
 
-        p {
+        h3 {
           margin-bottom: 0;
           font-size: 14px;
+        }
+
+        span {
+          font-size: 11px;
         }
       }
     }

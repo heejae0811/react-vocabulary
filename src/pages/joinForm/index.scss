@@ -8,9 +8,9 @@
         font-size: 18px;
       }
 
-      p {
+      span {
+        display: inline-block;
         margin-top: 10px;
-        color: #d20000;
         font-size: 13px;
       }
     }
@@ -36,7 +36,7 @@
           font-size: 14px;
         }
 
-        p {
+        span {
           font-size: 11px;
         }
       }
