@@ -9,12 +9,14 @@ import Title from '../../components/Title'
 import './index.scss'
 
 const VocaCreate = () => {
+  // ** Hooks
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  // ** Custom Hooks
   const vocabularyCategory = useInput()
   const vocabularyEnglish = useInput()
   const vocabularyKorean = useInput()
-
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
 
   const onCreateVocabulary = () => {
     if (vocabularyCategory.value === '') {

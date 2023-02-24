@@ -7,6 +7,7 @@ import Title from '../../components/Title'
 const Result = props => {
   const {category, koreanAnswer, isRecord} = props
 
+  // ** Hooks
   const navigate = useNavigate()
   const dispatch = useDispatch()
 

@@ -8,13 +8,16 @@ import Result from './Result'
 import './index.scss'
 
 const Quiz = () => {
+  // ** Hooks
+  const params = useParams()
+  const dispatch = useDispatch()
+
+  // ** States
   const [isAnswer, setAnswer] = useState('')
   const [isRecord, setRecord] = useState([])
   const [activeQuestion, setActiveQuestion] = useState(0)
 
-  const params = useParams()
-  const dispatch = useDispatch()
-
+  // ** Redux States
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
 

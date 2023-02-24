@@ -9,12 +9,14 @@ import Title from '../../components/Title'
 import './index.scss'
 
 const Join = () => {
+  // ** Hooks
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  // ** Custom Hooks
   const userName = useInput()
   const userId = useInput()
   const userPassword = useInput()
-
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
 
   const onCreateUser = () => {
     if (userName.value === '') {

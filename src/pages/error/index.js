@@ -4,6 +4,7 @@ import Title from '../../components/Title'
 import Layout from '../../components/Layout'
 
 const Error = () => {
+  // ** Hooks
   const navigate = useNavigate()
 
   return (

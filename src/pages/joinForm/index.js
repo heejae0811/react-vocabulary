@@ -8,6 +8,7 @@ import Title from '../../components/Title'
 import './index.scss'
 
 const JoinForm = () => {
+  // ** Hooks
   const navigate = useNavigate()
   const dispatch = useDispatch()
 

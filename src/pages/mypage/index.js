@@ -6,8 +6,10 @@ import Title from '../../components/Title'
 import './index.scss'
 
 const MyPage = () => {
+  // ** Hooks
   const navigate = useNavigate()
 
+  // ** Redux States
   const loginUser = useSelector(state => state.user.loginUser)
 
   return (

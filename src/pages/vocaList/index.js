@@ -8,13 +8,16 @@ import Title from '../../components/Title'
 import './index.scss'
 
 const VocaList = () => {
+  // ** Hooks
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
+  // ** Redux States
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const setCategory = new Set(vocabulary.map(list => list.category))
   const vocabularyCategory = ['All list', ...setCategory]
 
+  // ** States
   const [isSortList, setSortList] = useState(vocabulary)
   const [isSelectOption, setSelectOption] = useState('')
 

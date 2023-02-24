@@ -7,9 +7,11 @@ import Title from '../../components/Title'
 import './index.scss'
 
 const Category = () => {
+  // ** Hooks
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
+  // ** Redux States
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const category = new Set(vocabulary.map(list => list.category))
   const vocabularyCategory = [...category]
