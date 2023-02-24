@@ -7,8 +7,8 @@ const Answer = props => {
 
   // state에 페이지네이션, 정답 기록
   const onNextQuiz = () => {
-    setActiveQuestion(activeQuestion + 1)
     setRecord(isRecord => [...isRecord, isAnswer])
+    setActiveQuestion(activeQuestion + 1)
     setAnswer('')
   }
 

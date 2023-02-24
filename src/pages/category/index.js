@@ -42,8 +42,8 @@ const Category = () => {
       </ul>
 
       <div className="category-btn">
-        <Button onClick={() => navigate('/vocaCreate')} bgColor="#e5cd5e">Create new vocabulary</Button>
-        <Button onClick={() => navigate('/vocaList')} bgColor="#dfac70">Vocabulary list</Button>
+        <Button onClick={() => navigate('/vocaCreate')} bgColor="#ff9bac">Create new vocabulary</Button>
+        <Button onClick={() => navigate('/vocaList')} bgColor="#e5cd5e">Vocabulary list</Button>
         <div>
           <Button onClick={() => navigate('/mypage')} bgColor="#bbb">My page</Button>
           <Button onClick={onLogout} bgColor="#bbb">Logout</Button>

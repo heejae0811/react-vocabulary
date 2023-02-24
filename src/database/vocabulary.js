@@ -75,6 +75,16 @@ export const vocabulary = [
     korean: '오렌지'
   },
   {
+    category: '과일',
+    english: 'grape',
+    korean: '포토'
+  },
+  {
+    category: '과일',
+    english: 'durian',
+    korean: '두리안'
+  },
+  {
     category: '사물',
     english: 'computer',
     korean: '컴퓨터'
