@@ -5,7 +5,7 @@ import Button from '../../components/Button'
 import Title from '../../components/Title'
 
 const Result = props => {
-  const {category, englishAnswer, koreanAnswer, isRecord, languageLocation} = props
+  const {category, selectedVocabulary, englishAnswer, koreanAnswer, isRecord, languageLocation} = props
 
   // ** Hooks
   const navigate = useNavigate()
@@ -13,6 +13,10 @@ const Result = props => {
 
   const enCorrectAnswer = isRecord.filter(record => koreanAnswer.includes(record))
   const enWrongAnswer = isRecord.filter(record => !koreanAnswer.includes(record))
+
+  console.log(enCorrectAnswer)
+  console.log(enWrongAnswer)
+  console.log(isRecord)
 
   const krCorrectAnswer = isRecord.filter(record => englishAnswer.includes(record))
   const krWrongAnswer = isRecord.filter(record => !englishAnswer.includes(record))
@@ -41,7 +45,7 @@ const Result = props => {
     <div className="result">
       <Title>Result of the quiz</Title>
 
-      <ul>
+      <ul className="result-info">
         <li>
           <h3>총 문제</h3>
           <p>{isRecord.length}</p>
@@ -72,6 +76,39 @@ const Result = props => {
             </>
           )
         }
+      </ul>
+
+      <ul className="result-record">
+        <li>
+          <h3>영어</h3>
+          {
+            selectedVocabulary.map((list, index) => {
+              return(
+                <p key={index}>{index + 1}. {list.english}</p>
+              )
+            })
+          }
+        </li>
+        <li>
+          <h3>뜻</h3>
+          {
+            selectedVocabulary.map((list, index) => {
+              return(
+                <p key={index}>{index + 1}. {list.korean}</p>
+              )
+            })
+          }
+        </li>
+        <li>
+          <h3>답변</h3>
+          {
+            isRecord.map((record, index) => {
+              return(
+                <p key={index}>{index + 1}. {record}</p>
+              )
+            })
+          }
+        </li>
       </ul>
 
       <Button onClick={() => onSaveQuiz()} bgColor="#e5cd5e">Again quiz</Button>

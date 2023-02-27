@@ -22,7 +22,7 @@ const StyledButton = styled.button`
   }
   
   @media screen and (max-width: 720px) {
-    height: ${(props) => props.height || '45px'};
+    height: ${(props) => props.height || '40px'};
     font-size: 12px;
   }
 `

@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    max-height: 336px;
+    max-height: 308px;
     margin: 20px 0;
 
     li {
@@ -32,8 +32,12 @@
       border-radius: 10px;
 
       p {
-        margin: 7px 0;
+        margin-top: 7px;
         text-align: center;
+
+        &:first-child {
+          margin-top: 0;
+        }
       }
 
       button {
@@ -45,10 +49,22 @@
 
 @media screen and (max-width: 720px) {
   .voca-list {
+    &-sort {
+      p {
+        font-size: 12px;
+      }
+
+      ul {
+        li {
+          font-size: 12px;
+        }
+      }
+    }
+
     &-item {
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
-      max-height: 427px;
+      max-height: 385px;
       margin: 10px 0;
 
       li {

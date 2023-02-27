@@ -61,6 +61,7 @@ const Quiz = () => {
         quizLength === activeQuestion && (
           <Result
             category={params.category}
+            selectedVocabulary={selectedVocabulary}
             englishAnswer={englishAnswer}
             koreanAnswer={koreanAnswer}
             isRecord={isRecord}

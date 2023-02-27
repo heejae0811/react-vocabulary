@@ -1,7 +1,11 @@
 .login {
   &-form {
     div {
-      margin-bottom: 50px;
+      margin-top: 50px;
+
+      &:first-child {
+        margin-top: 0;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -31,7 +35,7 @@
   .login {
     &-form {
       div {
-        margin-bottom: 30px;
+        margin-top: 30px;
 
         h3 {
           margin-bottom: 0;
