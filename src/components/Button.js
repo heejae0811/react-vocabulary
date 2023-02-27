@@ -29,7 +29,11 @@ const StyledButton = styled.button`
 
 const Button = ({disabled, children, ...rest}) => {
   return (
-    <StyledButton disabled={disabled} {...rest}>{children}</StyledButton>
+    <StyledButton
+      disabled={disabled}
+      {...rest}>
+      {children}
+    </StyledButton>
   )
 }
 

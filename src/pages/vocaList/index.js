@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {handleDeleteVocabulary} from '../../redux/vocabulary'
 import Button from '../../components/Button'
 import Layout from '../../components/Layout'
+import SelectBox from '../../components/SelectBox'
 import Title from '../../components/Title'
 import './index.scss'
 
@@ -68,19 +69,12 @@ const VocaList = () => {
 
       <div className="voca-list-sort">
         <p>총 {isSortList.length}개</p>
+
         <ul>
           <li onClick={onEnglishSort}>알파벳순</li>
           <li onClick={onKoreanSort}>가나다순</li>
           <li>
-            <select value={isSelectOption} onChange={onCategorySort}>
-              {
-                vocabularyCategory.map((category, index) => {
-                  return (
-                    <option key={index} value={category}>{category}</option>
-                  )
-                })
-              }
-            </select>
+            <SelectBox value={isSelectOption} onChange={onCategorySort} options={vocabularyCategory}/>
           </li>
         </ul>
       </div>

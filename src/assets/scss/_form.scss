@@ -14,19 +14,6 @@ input {
   }
 }
 
-select {
-  padding: 5px;
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  outline: none;
-  color: #fff;
-
-  option {
-    background-color: #43437e;
-  }
-}
-
 @media screen and (max-width: 720px) {
   input {
     font-size: 12px;
