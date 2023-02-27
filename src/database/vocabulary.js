@@ -77,7 +77,7 @@ export const vocabulary = [
   {
     category: '과일',
     english: 'grape',
-    korean: '포토'
+    korean: '포도'
   },
   {
     category: '과일',
