@@ -16,8 +16,12 @@ const Category = () => {
   const category = new Set(vocabulary.map(list => list.category))
   const vocabularyCategory = [...category]
 
-  const onDetailNavigate = (category) => {
-    navigate(`/quiz/${category}`)
+  const onEnDetailNavigate = (category) => {
+    navigate(`/quiz/en/${category}`)
+  }
+
+  const onKrDetailNavigate = (category) => {
+    navigate(`/quiz/kr/${category}`)
   }
 
   const onLogout = () => {
@@ -37,7 +41,13 @@ const Category = () => {
         {
           vocabularyCategory.map((category, index) => {
             return (
-              <li key={index} onClick={() => onDetailNavigate(category)}>{category}</li>
+              <li key={index}>
+                {category}
+                <div>
+                  <Button onClick={() => onEnDetailNavigate(category)} height="30px" bgColor="#bbb">English</Button>
+                  <Button onClick={() => onKrDetailNavigate(category)} height="30px" bgColor="#bbb">Korean</Button>
+                </div>
+              </li>
             )
           })
         }

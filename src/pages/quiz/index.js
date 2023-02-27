@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {useParams} from 'react-router'
+import {useParams, useLocation} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
 import {handleSelectVocabulary} from '../../redux/vocabulary'
 import Layout from '../../components/Layout'
@@ -11,18 +11,17 @@ const Quiz = () => {
   // ** Hooks
   const params = useParams()
   const dispatch = useDispatch()
+  const location = useLocation()
+  const languageLocation = location.pathname.split('/')[2]
 
   // ** States
   const [isAnswer, setAnswer] = useState('')
   const [isRecord, setRecord] = useState([])
   const [activeQuestion, setActiveQuestion] = useState(0)
 
-
   // ** Redux States
   const vocabulary = useSelector(state => state.vocabulary.vocabulary)
   const selectedVocabulary = useSelector(state => state.vocabulary.selectedVocabulary)
-  const quizList = useSelector(state => state.vocabulary.quizList)
-
 
   useEffect(() => {
     if (params.category && vocabulary.filter(list => list.category === params.category)) {
@@ -32,13 +31,14 @@ const Quiz = () => {
 
   if (!selectedVocabulary) return null
 
-  const koreanAnswer = quizList
-  const quizLength = quizList.length
+  const englishAnswer = selectedVocabulary.map(list => list.english)
+  const koreanAnswer = selectedVocabulary.map(list => list.korean)
+  const quizLength = selectedVocabulary.length
 
   return (
     <Layout>
       {
-        quizList.map((quiz, index) => {
+        selectedVocabulary.map((quiz, index) => {
           return (
             <Answer
               key={index}
@@ -51,17 +51,20 @@ const Quiz = () => {
               setRecord={setRecord}
               activeQuestion={activeQuestion}
               setActiveQuestion={setActiveQuestion}
+              languageLocation={languageLocation}
             />
           )
         })
       }
 
       {
-        quizList.length === activeQuestion && (
+        quizLength === activeQuestion && (
           <Result
             category={params.category}
+            englishAnswer={englishAnswer}
             koreanAnswer={koreanAnswer}
             isRecord={isRecord}
+            languageLocation={languageLocation}
           />
         )
       }

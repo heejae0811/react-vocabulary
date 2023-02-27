@@ -31,7 +31,8 @@ function App() {
             <Route path="/category" element={<Category/>}/>
             <Route path="/vocaCreate" element={<VocaCreate/>}/>
             <Route path="/vocaList" element={<VocaList/>}/>
-            <Route path="/quiz/:category" element={<Quiz/>}/>
+            <Route path="/quiz/en/:category" element={<Quiz/>}/>
+            <Route path="/quiz/kr/:category" element={<Quiz/>}/>
           </Routes>
         ) : (
           <Routes>
@@ -44,7 +45,8 @@ function App() {
             <Route path="/category" element={<Error/>}/>
             <Route path="/vocaCreate" element={<Error/>}/>
             <Route path="/vocaList" element={<Error/>}/>
-            <Route path="/quiz/:category" element={<Error/>}/>
+            <Route path="/quiz/en/:category" element={<Error/>}/>
+            <Route path="/quiz/kr/:category" element={<Error/>}/>
           </Routes>
         )
       }

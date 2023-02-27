@@ -7,18 +7,21 @@
     margin-bottom: 10px;
 
     li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 50px 0;
-      font-size: 18px;
+      padding: 40px 20px;
       border-radius: 10px;
       background-color: #2b2861;
-      transition: all .3s;
-      cursor: pointer;
+      font-size: 18px;
+      text-align: center;
 
-      &:hover {
-        opacity: .8;
+      div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        button {
+          width: 48%;
+          font-size: 14px;
+        }
       }
     }
   }
