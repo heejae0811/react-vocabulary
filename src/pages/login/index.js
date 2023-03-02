@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react'
 import {useNavigate} from 'react-router'
 import {useDispatch, useSelector} from 'react-redux'
 import {useForm} from 'react-hook-form'
@@ -16,23 +15,15 @@ const Login = () => {
   // ** Redux States
   const users = useSelector(state => state.user.users)
 
+  // ** useForm
   const {register, handleSubmit, watch, formState: {errors}} = useForm()
   const onSubmit = (data) => {
-    const userId = users.find(user => user.loginId === data.loginId)
-    const userPw = users.find(user => user.loginPassword === data.loginPassword)
-
-    if (userId.length === 0) {
-      alert('아이디가 틀렸습니다.')
-    } else if (userPw.length === 0) {
-      alert('비밀번호가 틀렸습니다.')
-    } else {
-      dispatch(handleLogin({
-        loginId: data.loginId,
-        loginPassword: data.loginPassword
-      }))
-      alert('로그인 되었습니다.')
-      navigate('/category')
-    }
+    dispatch(handleLogin({
+      loginId: data.loginId,
+      loginPassword: data.loginPassword
+    }))
+    alert('로그인 되었습니다.')
+    navigate('/category')
   }
 
   return (
@@ -47,12 +38,11 @@ const Login = () => {
             placeholder="아이디를 입력해주세요. (test)"
             autoFocus
             {...register('loginId', {
-              required: true
+              required: true,
+              validate: (value, forValues) => users.filter(user => user.loginId === value).length !== 0
             })}/>
           {errors?.loginId?.type === 'required' && <span className="text-danger">아이디는 필수입니다.</span>}
-          {
-            users.filter(user => user.loginId === errors?.loginId).length === 0 && <span className="text-danger">아이디가 틀렸습니다.</span>
-          }
+          {errors?.loginId?.type === 'validate' && <span className="text-danger">아이디가 틀렸습니다.</span>}
         </div>
 
         <div>
@@ -61,12 +51,11 @@ const Login = () => {
             type="password"
             placeholder="비밀번호를 입력해주세요. (123)"
             {...register('loginPassword', {
-              required: true
+              required: true,
+              validate: (value, forValues) => users.filter(user => user.loginPassword === value).length !== 0
             })}/>
           {errors?.loginPassword?.type === 'required' && <span className="text-danger">비밀번호는 필수입니다.</span>}
-          {
-            users.filter(user => user.loginPassword === errors?.loginPassword).length === 0 && <span className="text-danger">비밀번호가 틀렸습니다.</span>
-          }
+          {errors?.loginPassword?.type === 'validate' && <span className="text-danger">비밀번호가 틀렸습니다.</span>}
         </div>
 
         <div className="login-form-btn">

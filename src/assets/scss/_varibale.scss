@@ -1,3 +1,12 @@
 .text-danger {
+  display: inline-block;
+  margin-top: 10px;
   color: #d20000;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 720px) {
+  .text-danger {
+    font-size: 11px;
+  }
 }
