@@ -2,35 +2,45 @@ body {
   background-color: #8294C4;
 
   &::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #ddd;
+    background-color: #DBDFEA;
   }
 
   .wrap {
     position: relative;
     width: 100%;
-    min-height: 100vh;
   }
 
   .inner {
     max-width: 1024px;
     width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
     padding: 20px;
+  }
+
+  footer {
+    width: calc(100% - 40px);
+    padding: 20px;
+
+    p {
+      line-height: 1.2;
+      text-align: center;
+    }
   }
 
   .scroll {
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
-      width: 4px;
+      width: 5px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: #ddd;
+      background-color: #DBDFEA;
     }
   }
 }

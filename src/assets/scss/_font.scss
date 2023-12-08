@@ -16,3 +16,9 @@ body {
     font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
   }
 }
+
+@media screen and (max-width: 720px) {
+  body {
+    font-size: 14px;
+  }
+}

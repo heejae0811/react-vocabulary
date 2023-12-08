@@ -18,12 +18,12 @@ const StyledButton = styled.button`
   }
   
   &:disabled {
-    background-color: #bbb;
+    background-color: #DBDFEA;
   }
   
   @media screen and (max-width: 720px) {
     height: ${(props) => props.height || '40px'};
-    font-size: 12px;
+    font-size: 14px;
   }
 `
 

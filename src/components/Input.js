@@ -11,7 +11,7 @@ const StyledInput = styled.input`
   font-size: 16px;
 
   &::placeholder {
-    color: #bbb;
+    color: #DBDFEA;
   }
 
   @media screen and (max-width: 720px) {

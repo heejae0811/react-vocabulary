@@ -1,35 +1,16 @@
 .join {
-  &-input {
+  &-form {
     div {
       margin-bottom: 50px;
-
-      p {
-        margin-bottom: 10px;
-        font-size: 18px;
-      }
     }
-  }
 
-  &-btn {
-    button {
-      &:last-child {
-        margin-top: 10px;
+    &-btn {
+      button {
+        margin-bottom: 15px;
       }
     }
   }
 }
 
 @media screen and (max-width: 720px) {
-  .join {
-    &-input {
-      div {
-        margin-bottom: 30px;
-
-        p {
-          margin-bottom: 0;
-          font-size: 14px;
-        }
-      }
-    }
-  }
 }
