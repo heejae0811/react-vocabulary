@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledTitle = styled.h1`
-  margin: 60px auto;
+  margin: 0 auto 60px;
   color: #333;
   font-family: 'Raleway', 'Noto Sans KR', sans-serif;
   font-size: 36px;

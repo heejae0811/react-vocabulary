@@ -70,10 +70,8 @@ const JoinForm = () => {
                             pattern: /^[0-9]+$/
                         })}/>
                     {errors?.loginPassword?.type === 'required' && <span className="text-danger">비밀번호는 필수입니다.</span>}
-                    {errors?.loginPassword?.type === 'minLength' &&
-                        <span className="text-danger">비밀번호는 2글자 이상입니다.</span>}
-                    {errors?.loginPassword?.type === 'maxLength' &&
-                        <span className="text-danger">비밀번호는 10글자 이하입니다.</span>}
+                    {errors?.loginPassword?.type === 'minLength' && <span className="text-danger">비밀번호는 2글자 이상입니다.</span>}
+                    {errors?.loginPassword?.type === 'maxLength' && <span className="text-danger">비밀번호는 10글자 이하입니다.</span>}
                     {errors?.loginPassword?.type === 'pattern' && <span className="text-danger">비밀번호는 숫자만 가능합니다.</span>}
                 </div>
 
@@ -116,13 +114,21 @@ const JoinForm = () => {
                             pattern: /^\d{2,3}-\d{3,4}-\d{3,4}/i
                         })}/>
                     {errors?.phoneNumber?.type === 'required' && <span className="text-danger">전화번호는 필수입니다.</span>}
-                    {errors?.phoneNumber?.type === 'pattern' &&
-                        <span className="text-danger">-가 포함된 전화번호 형식만 가능합니다.</span>}
+                    {errors?.phoneNumber?.type === 'pattern' && <span className="text-danger">-가 포함된 전화번호 형식만 가능합니다.</span>}
                 </div>
 
                 <div className="join-form-btn">
-                    <Button type="submit" bgColor="#394867" color="#FFF">Confirm</Button>
-                    <Button onClick={() => navigate('/login')} bgColor="#DBDFEA">Cancel</Button>
+                    <Button
+                        type="submit"
+                        bgColor="#394867"
+                        color="#FFF">
+                        Confirm
+                    </Button>
+                    <Button
+                        bgColor="#DBDFEA"
+                        onClick={() => navigate('/login')}>
+                        Cancel
+                    </Button>
                 </div>
             </form>
         </Layout>

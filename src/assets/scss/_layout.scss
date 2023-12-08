@@ -11,18 +11,24 @@ body {
 
   .wrap {
     position: relative;
-    width: 100%;
+    width: calc(100% - 40px);
+    min-height: 100vh;
+    padding: 20px;
   }
 
   .inner {
     max-width: 1024px;
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    padding: 20px;
+    width: calc(100% - 40px);
+    margin: 0 auto 50px;
+    padding: 60px 20px;
+    background-color: #ACB1D6;
+    border-radius: 5px;
   }
 
   footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: calc(100% - 40px);
     padding: 20px;
 

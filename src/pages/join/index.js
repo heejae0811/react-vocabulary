@@ -58,7 +58,7 @@ const Join = () => {
                         onKeyPress={onEnter}
                         placeholder="이름을 입력해 주세요."
                         {...userName}
-                        autoFocus />
+                        autoFocus/>
                 </div>
 
                 <div>
@@ -82,8 +82,17 @@ const Join = () => {
                 </div>
 
                 <div className="join-form-btn">
-                    <Button onClick={onCreateUser} bgColor="#394867" color="#FFF">Confirm</Button>
-                    <Button onClick={() => navigate('/login')} bgColor="#DBDFEA">Cancel</Button>
+                    <Button
+                        bgColor="#394867"
+                        color="#FFF"
+                        onClick={onCreateUser}>
+                        Confirm
+                    </Button>
+                    <Button
+                        bgColor="#DBDFEA"
+                        onClick={() => navigate('/login')}>
+                        Cancel
+                    </Button>
                 </div>
             </form>
         </Layout>

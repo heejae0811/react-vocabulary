@@ -3,40 +3,61 @@ import Input from '../../components/Input'
 import Title from '../../components/Title'
 
 const Answer = props => {
-  const {className, quiz, quizLength, isAnswer, setAnswer, isRecord, setRecord, activeQuestion, setActiveQuestion, languageLocation} = props
+    const {
+        className,
+        quiz,
+        quizLength,
+        isAnswer,
+        setAnswer,
+        isRecord,
+        setRecord,
+        activeQuestion,
+        setActiveQuestion,
+        languageLocation
+    } = props
 
-  // state에 페이지네이션, 정답 기록
-  const onNextQuiz = () => {
-    setRecord(isRecord => [...isRecord, isAnswer])
-    setActiveQuestion(activeQuestion + 1)
-    setAnswer('')
-  }
-
-  const onEnter = (e) => {
-    if (e.key === 'Enter') {
-      onNextQuiz()
+    // state에 페이지네이션, 정답 기록
+    const onNextQuiz = () => {
+        setRecord(isRecord => [...isRecord, isAnswer])
+        setActiveQuestion(activeQuestion + 1)
+        setAnswer('')
     }
-  }
 
-  return (
-    <div className={`answer ${className}`}>
-      <Title>Let's start vocabulary quiz</Title>
+    const onEnter = (e) => {
+        if (e.key === 'Enter') {
+            onNextQuiz()
+        }
+    }
 
-      {
-        languageLocation === 'en' ? (
-          <h2>{quiz.english}</h2>
-        ) : (
-          <h2>{quiz.korean}</h2>
-        )
-      }
+    return (
+        <div className={`answer ${className}`}>
+            <Title>Let's start vocabulary quiz</Title>
 
-      <Input type="text" value={isAnswer} onChange={e => setAnswer(e.target.value)} onKeyPress={onEnter} placeholder="뜻을 입력해 주세요." autoFocus/>
+            {
+                languageLocation === 'en' ? (
+                    <h2>{quiz.english}</h2>
+                ) : (
+                    <h2>{quiz.korean}</h2>
+                )
+            }
 
-      <p className="answer-pagination">{activeQuestion + 1} / {quizLength}</p>
+            <Input
+                type="text"
+                value={isAnswer}
+                onChange={e => setAnswer(e.target.value)}
+                onKeyPress={onEnter}
+                placeholder="뜻을 입력해 주세요."
+                autoFocus />
 
-      <Button onClick={() => onNextQuiz()} bgColor="#e5cd5e">Next</Button>
-    </div>
-  )
+            <p className="answer-pagination">{activeQuestion + 1} / {quizLength}</p>
+
+            <Button
+                bgColor="#FFE382"
+                onClick={() => onNextQuiz()}>
+                Next
+            </Button>
+        </div>
+    )
 }
 
 export default Answer
