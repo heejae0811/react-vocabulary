@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-vocabulary/static/css/main.e84bf8ae.css",
+    "main.js": "/react-vocabulary/static/js/main.7a76adad.js",
+    "index.html": "/react-vocabulary/index.html",
+    "main.e84bf8ae.css.map": "/react-vocabulary/static/css/main.e84bf8ae.css.map",
+    "main.7a76adad.js.map": "/react-vocabulary/static/js/main.7a76adad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e84bf8ae.css",
+    "static/js/main.7a76adad.js"
+  ]
+}
