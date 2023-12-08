@@ -41,7 +41,7 @@ const JoinForm = () => {
             <h3>ID</h3>
             <input
               type="text"
-              placeholder="아이디를 입력해주세요."
+              placeholder="아이디를 입력해 주세요."
               autoFocus
               {...register('loginId', {
                 required: true,
@@ -59,7 +59,7 @@ const JoinForm = () => {
             <h3>Password</h3>
             <input
               type="password"
-              placeholder="비밀번호를 입력해주세요."
+              placeholder="비밀번호를 입력해 주세요."
               {...register('loginPassword', {
                 required: true,
                 minLength: 2,
@@ -76,7 +76,7 @@ const JoinForm = () => {
             <h3>Name</h3>
             <input
               type="text"
-              placeholder="이름 입력해주세요."
+              placeholder="이름 입력해 주세요."
               {...register('name', {
                 required: true,
                 pattern: /^[ㄱ-ㅎ|가-힣]+$/
@@ -89,7 +89,7 @@ const JoinForm = () => {
             <h3>E-mail</h3>
             <input
               type="text"
-              placeholder="이메일을 입력해주세요."
+              placeholder="이메일을 입력해 주세요."
               {...register('email', {
                 required: true,
                 pattern: /^[A-Za-z0-9]+@[A-Za-z0-9.]+$/
@@ -102,7 +102,7 @@ const JoinForm = () => {
             <h3>Number</h3>
             <input
               type="text"
-              placeholder="전화번호를 입력해주세요."
+              placeholder="전화번호를 입력해 주세요."
               {...register('phoneNumber', {
                 required: true,
                 pattern: /^\d{2,3}-\d{3,4}-\d{3,4}/i

@@ -20,11 +20,11 @@ const Join = () => {
 
   const onCreateUser = () => {
     if (userName.value === '') {
-      alert('이름을 입력해주세요.')
+      alert('이름을 입력해 주세요.')
     } else if (userId.value === '') {
-      alert('아이디를 입력해주세요.')
+      alert('아이디를 입력해 주세요.')
     } else if (userPassword.value === '') {
-      alert('비밀번호를 입력해주세요.')
+      alert('비밀번호를 입력해 주세요.')
     } else {
       if (window.confirm('회원가입을 하시겠습니까?')) {
         dispatch(handelCreateUser({
@@ -52,17 +52,17 @@ const Join = () => {
       <div className="join-input">
         <div>
           <p>Name</p>
-          <Input type="text" onKeyPress={onEnter} placeholder="이름을 입력해주세요." {...userName} autoFocus/>
+          <Input type="text" onKeyPress={onEnter} placeholder="이름을 입력해 주세요." {...userName} autoFocus/>
         </div>
 
         <div>
           <p>ID</p>
-          <Input type="text" onKeyPress={onEnter} placeholder="아이디를 입력해주세요." {...userId}/>
+          <Input type="text" onKeyPress={onEnter} placeholder="아이디를 입력해 주세요." {...userId}/>
         </div>
 
         <div>
           <p>Password</p>
-          <Input type="password" onKeyPress={onEnter} placeholder="비밀번호를 입력해주세요." {...userPassword}/>
+          <Input type="password" onKeyPress={onEnter} placeholder="비밀번호를 입력해 주세요." {...userPassword}/>
         </div>
       </div>
 

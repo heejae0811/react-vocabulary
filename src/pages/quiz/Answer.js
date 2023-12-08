@@ -30,7 +30,7 @@ const Answer = props => {
         )
       }
 
-      <Input type="text" value={isAnswer} onChange={e => setAnswer(e.target.value)} onKeyPress={onEnter} placeholder="뜻을 입력해주세요." autoFocus/>
+      <Input type="text" value={isAnswer} onChange={e => setAnswer(e.target.value)} onKeyPress={onEnter} placeholder="뜻을 입력해 주세요." autoFocus/>
 
       <p className="answer-pagination">{activeQuestion + 1} / {quizLength}</p>
 

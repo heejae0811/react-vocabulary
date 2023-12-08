@@ -13,45 +13,45 @@ import {Reset} from 'styled-reset'
 import './assets/scss/common.scss'
 
 function App() {
-  const loginUser = useSelector(state => state.user.loginUser)
+    const loginUser = useSelector(state => state.user.loginUser)
 
-  return (
-    <>
-      <Reset/>
+    return (
+        <>
+            <Reset/>
 
-      {
-        loginUser !== null ? (
-          <Routes>
-            <Route path="/" element={<Login/>}/>
-            <Route path="/react-vocabulary" element={<Login/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/join" element={<Join/>}/>
-            <Route path="/joinForm" element={<JoinForm/>}/>
-            <Route path="/mypage" element={<MyPage/>}/>
-            <Route path="/category" element={<Category/>}/>
-            <Route path="/vocaCreate" element={<VocaCreate/>}/>
-            <Route path="/vocaList" element={<VocaList/>}/>
-            <Route path="/quiz/en/:category" element={<Quiz/>}/>
-            <Route path="/quiz/kr/:category" element={<Quiz/>}/>
-          </Routes>
-        ) : (
-          <Routes>
-            <Route path="/" element={<Login/>}/>
-            <Route path="/react-vocabulary" element={<Login/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/join" element={<Join/>}/>
-            <Route path="/joinForm" element={<JoinForm/>}/>
-            <Route path="/mypage" element={<Error/>}/>
-            <Route path="/category" element={<Error/>}/>
-            <Route path="/vocaCreate" element={<Error/>}/>
-            <Route path="/vocaList" element={<Error/>}/>
-            <Route path="/quiz/en/:category" element={<Error/>}/>
-            <Route path="/quiz/kr/:category" element={<Error/>}/>
-          </Routes>
-        )
-      }
-    </>
-  )
+            {
+                loginUser !== null ? (
+                    <Routes>
+                        <Route path="/" element={<Login/>}/>
+                        <Route path="/react-vocabulary" element={<Login/>}/>
+                        <Route path="/login" element={<Login/>}/>
+                        <Route path="/join" element={<Join/>}/>
+                        <Route path="/joinForm" element={<JoinForm/>}/>
+                        <Route path="/mypage" element={<MyPage/>}/>
+                        <Route path="/category" element={<Category/>}/>
+                        <Route path="/vocaCreate" element={<VocaCreate/>}/>
+                        <Route path="/vocaList" element={<VocaList/>}/>
+                        <Route path="/quiz/en/:category" element={<Quiz/>}/>
+                        <Route path="/quiz/kr/:category" element={<Quiz/>}/>
+                    </Routes>
+                ) : (
+                    <Routes>
+                        <Route path="/" element={<Login/>}/>
+                        <Route path="/react-vocabulary" element={<Login/>}/>
+                        <Route path="/login" element={<Login/>}/>
+                        <Route path="/join" element={<Join/>}/>
+                        <Route path="/joinForm" element={<JoinForm/>}/>
+                        <Route path="/mypage" element={<Error/>}/>
+                        <Route path="/category" element={<Error/>}/>
+                        <Route path="/vocaCreate" element={<Error/>}/>
+                        <Route path="/vocaList" element={<Error/>}/>
+                        <Route path="/quiz/en/:category" element={<Error/>}/>
+                        <Route path="/quiz/kr/:category" element={<Error/>}/>
+                    </Routes>
+                )
+            }
+        </>
+    )
 }
 
 export default App

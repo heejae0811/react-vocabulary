@@ -32,10 +32,11 @@ const Login = () => {
 
       <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <h3>ID</h3>
+          <label for="loginId">ID</label>
           <input
             type="text"
-            placeholder="아이디를 입력해주세요. (test)"
+            id="loginId"
+            placeholder="아이디를 입력해 주세요. (test)"
             autoFocus
             {...register('loginId', {
               required: true,
@@ -46,10 +47,11 @@ const Login = () => {
         </div>
 
         <div>
-          <h3>Password</h3>
+          <label for="loginPw">Password</label>
           <input
             type="password"
-            placeholder="비밀번호를 입력해주세요. (123)"
+            id="loginPw"
+            placeholder="비밀번호를 입력해 주세요. (123)"
             {...register('loginPassword', {
               required: true,
               validate: (value, forValues) => users.filter(user => user.loginPassword === value).length !== 0
@@ -59,9 +61,9 @@ const Login = () => {
         </div>
 
         <div className="login-form-btn">
-          <Button type="submit" bgColor="#2b2861">Login</Button>
-          <Button onClick={() => navigate('/join')} bgColor="#bbb">Easy Join</Button>
-          <Button onClick={() => navigate('/joinForm')} bgColor="#bbb">Join</Button>
+          <Button type="submit" bgColor="#394867" color="#FFF">Login</Button>
+          <Button onClick={() => navigate('/join')} bgColor="#DBDFEA">Easy Join</Button>
+          <Button onClick={() => navigate('/joinForm')} bgColor="#DBDFEA">Join</Button>
         </div>
       </form>
     </Layout>

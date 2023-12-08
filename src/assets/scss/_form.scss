@@ -1,16 +1,22 @@
-input {
-  width: calc(100% - 20px);
-  padding: 10px;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid #000;
-  color: #fff;
-  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
-  font-size: 16px;
+form {
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+  }
 
-  &::placeholder {
-    color: #bbb;
+  input {
+    width: calc(100% - 20px);
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+
+    &::placeholder {
+      color: #bbb;
+    }
   }
 }
 

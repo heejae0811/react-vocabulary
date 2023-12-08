@@ -36,7 +36,7 @@ const VocaCreate = () => {
           <p>Category</p>
           <input
             type="text"
-            placeholder="카테고리를 입력해주세요."
+            placeholder="카테고리를 입력해 주세요."
             autoFocus
             {...register('category', {
               required: true
@@ -48,7 +48,7 @@ const VocaCreate = () => {
           <p>English</p>
           <input
             type="text"
-            placeholder="영어 단어를 입력해주세요."
+            placeholder="영어 단어를 입력해 주세요."
             {...register('english', {
               required: true,
               pattern: /^[a-z]+$/
@@ -61,7 +61,7 @@ const VocaCreate = () => {
           <p>Korean</p>
           <input
             type="text"
-            placeholder="한글 뜻을 입력해주세요."
+            placeholder="한글 뜻을 입력해 주세요."
             {...register('korean', {
               required: true,
               pattern: /^[ㄱ-ㅎ|가-힣]+$/

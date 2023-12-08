@@ -4,12 +4,12 @@ const StyledButton = styled.button`
   width: 100%;
   height: ${(props) => props.height || '50px'};
   background-color: ${props => props.bgColor};
-  outline: none;
+  color: ${props => props.color || '#333'};
   border: none;
-  border-radius: 10px;
-  color: #fff;
+  border-radius: 5px;
   font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
   font-size: 16px;
+  font-weight: 500;
   transition: all .3s;
   cursor: pointer;
   
