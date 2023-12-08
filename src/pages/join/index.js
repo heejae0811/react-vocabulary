@@ -58,7 +58,7 @@ const Join = () => {
                         onKeyPress={onEnter}
                         placeholder="이름을 입력해 주세요."
                         {...userName}
-                        autoFocus/>
+                        autoFocus />
                 </div>
 
                 <div>

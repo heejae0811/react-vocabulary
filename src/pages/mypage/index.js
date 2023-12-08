@@ -31,7 +31,7 @@ const MyPage = () => {
                 </li>
             </ul>
 
-            <ul className="my-page-record scroll">
+            <ul className="my-page-record">
                 {
                     loginUser.quizRecord && loginUser.quizRecord.map((record, index) => {
                         return (

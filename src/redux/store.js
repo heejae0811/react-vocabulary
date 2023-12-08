@@ -4,19 +4,19 @@ import storage from 'redux-persist/lib/storage'
 import rootReducer from './rootReducer'
 
 const persistConfig = {
-  key: 'root',
-  storage
+    key: 'root',
+    storage
 }
 
 const reducer = persistReducer(persistConfig, rootReducer)
 
 const store = configureStore({
-  reducer,
-  middleware: getDefaultMiddleware => {
-    return getDefaultMiddleware({
-      serializableCheck: false
-    })
-  }
+    reducer,
+    middleware: getDefaultMiddleware => {
+        return getDefaultMiddleware({
+            serializableCheck: false
+        })
+    }
 })
 
 export {store}

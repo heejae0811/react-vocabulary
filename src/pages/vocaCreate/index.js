@@ -41,7 +41,7 @@ const VocaCreate = () => {
                         autoFocus
                         {...register('category', {
                             required: true
-                        })}/>
+                        })} />
                     {errors?.category?.type === 'required' && <span className="text-danger">카테고리는 필수입니다.</span>}
                 </div>
 
@@ -54,7 +54,7 @@ const VocaCreate = () => {
                         {...register('english', {
                             required: true,
                             pattern: /^[a-z]+$/
-                        })}/>
+                        })} />
                     {errors?.english?.type === 'required' && <span className="text-danger">영어 단어는 필수입니다.</span>}
                     {errors?.english?.type === 'pattern' && <span className="text-danger">영어 소문자만 입력 가능합니다.</span>}
                 </div>
@@ -68,7 +68,7 @@ const VocaCreate = () => {
                         {...register('korean', {
                             required: true,
                             pattern: /^[ㄱ-ㅎ|가-힣]+$/
-                        })}/>
+                        })} />
                     {errors?.korean?.type === 'required' && <span className="text-danger">한글 뜻은 필수입니다.</span>}
                     {errors?.korean?.type === 'pattern' && <span className="text-danger">한글만 입력 가능합니다.</span>}
                 </div>

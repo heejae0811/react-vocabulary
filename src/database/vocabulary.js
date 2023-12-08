@@ -123,5 +123,5 @@ export const vocabulary = [
     category: '직업',
     english: 'teacher',
     korean: '선생님'
-  },
+  }
 ]

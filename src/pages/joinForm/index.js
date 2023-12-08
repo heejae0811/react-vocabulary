@@ -15,8 +15,6 @@ const JoinForm = () => {
     // useForm 사용해서 validation 처리
     const {register, handleSubmit, watch, formState: {errors}} = useForm()
     const onSubmit = (data) => {
-        // alert(JSON.stringify(data))
-
         if (window.confirm('회원가입을 하시겠습니까?')) {
             dispatch(handelCreateUser({
                 loginId: data.loginId,
@@ -50,7 +48,7 @@ const JoinForm = () => {
                             minLength: 2,
                             maxLength: 10,
                             pattern: /^[A-Za-z]+$/
-                        })}/>
+                        })} />
                     {errors?.loginId?.type === 'required' && <span className="text-danger">아이디는 필수입니다.</span>}
                     {errors?.loginId?.type === 'minLength' && <span className="text-danger">아이디는 2글자 이상입니다.</span>}
                     {errors?.loginId?.type === 'maxLength' && <span className="text-danger">아이디는 10글자 이하입니다.</span>}
@@ -68,7 +66,7 @@ const JoinForm = () => {
                             minLength: 2,
                             maxLength: 10,
                             pattern: /^[0-9]+$/
-                        })}/>
+                        })} />
                     {errors?.loginPassword?.type === 'required' && <span className="text-danger">비밀번호는 필수입니다.</span>}
                     {errors?.loginPassword?.type === 'minLength' && <span className="text-danger">비밀번호는 2글자 이상입니다.</span>}
                     {errors?.loginPassword?.type === 'maxLength' && <span className="text-danger">비밀번호는 10글자 이하입니다.</span>}
@@ -84,7 +82,7 @@ const JoinForm = () => {
                         {...register('name', {
                             required: true,
                             pattern: /^[ㄱ-ㅎ|가-힣]+$/
-                        })}/>
+                        })} />
                     {errors?.name?.type === 'required' && <span className="text-danger">이름은 필수입니다.</span>}
                     {errors?.name?.type === 'pattern' && <span className="text-danger">이름은 한글만 가능합니다.</span>}
                 </div>
@@ -98,7 +96,7 @@ const JoinForm = () => {
                         {...register('email', {
                             required: true,
                             pattern: /^[A-Za-z0-9]+@[A-Za-z0-9.]+$/
-                        })}/>
+                        })} />
                     {errors?.email?.type === 'required' && <span className="text-danger">이메일은 필수입니다.</span>}
                     {errors?.email?.type === 'pattern' && <span className="text-danger">@가 포함된 이메일 형식만 가능합니다.</span>}
                 </div>
@@ -112,7 +110,7 @@ const JoinForm = () => {
                         {...register('phoneNumber', {
                             required: true,
                             pattern: /^\d{2,3}-\d{3,4}-\d{3,4}/i
-                        })}/>
+                        })} />
                     {errors?.phoneNumber?.type === 'required' && <span className="text-danger">전화번호는 필수입니다.</span>}
                     {errors?.phoneNumber?.type === 'pattern' && <span className="text-danger">-가 포함된 전화번호 형식만 가능합니다.</span>}
                 </div>

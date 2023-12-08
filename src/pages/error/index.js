@@ -10,7 +10,11 @@ const Error = () => {
     return (
         <Layout>
             <Title>You should login first</Title>
-            <Button onClick={() => navigate('/login')} bgColor="#2b2861">Go to Login</Button>
+            <Button
+                bgColor="#394867"
+                onClick={() => navigate('/login')}>
+                Go to Login
+            </Button>
         </Layout>
     )
 }

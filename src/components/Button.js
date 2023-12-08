@@ -4,7 +4,7 @@ const StyledButton = styled.button`
   width: 100%;
   height: ${(props) => props.height || '50px'};
   background-color: ${props => props.bgColor};
-  color: ${props => props.color || '#333'};
+  color: ${props => props.color || '#222'};
   border: none;
   border-radius: 5px;
   font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;

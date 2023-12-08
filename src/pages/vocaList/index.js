@@ -77,7 +77,7 @@ const VocaList = () => {
                         <SelectBox
                             value={isSelectOption}
                             onChange={onCategorySort}
-                            options={vocabularyCategory }/>
+                            options={vocabularyCategory} />
                     </li>
                 </ul>
             </div>

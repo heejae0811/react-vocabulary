@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledTitle = styled.h1`
   margin: 0 auto 60px;
-  color: #333;
+  color: #222;
   font-family: 'Raleway', 'Noto Sans KR', sans-serif;
   font-size: 36px;
   font-weight: 700;

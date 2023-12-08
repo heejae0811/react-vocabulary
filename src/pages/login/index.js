@@ -41,7 +41,7 @@ const Login = () => {
                         {...register('loginId', {
                             required: true,
                             validate: (value, forValues) => users.filter(user => user.loginId === value).length !== 0
-                        })}/>
+                        })} />
                     {errors?.loginId?.type === 'required' && <span className="text-danger">아이디는 필수입니다.</span>}
                     {errors?.loginId?.type === 'validate' && <span className="text-danger">아이디가 틀렸습니다.</span>}
                 </div>
@@ -55,7 +55,7 @@ const Login = () => {
                         {...register('loginPassword', {
                             required: true,
                             validate: (value, forValues) => users.filter(user => user.loginPassword === value).length !== 0
-                        })}/>
+                        })} />
                     {errors?.loginPassword?.type === 'required' && <span className="text-danger">비밀번호는 필수입니다.</span>}
                     {errors?.loginPassword?.type === 'validate' && <span className="text-danger">비밀번호가 틀렸습니다.</span>}
                 </div>

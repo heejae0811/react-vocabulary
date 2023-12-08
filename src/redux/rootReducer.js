@@ -3,8 +3,8 @@ import user from './user'
 import vocabulary from './vocabulary'
 
 const rootReducer = combineReducers({
-  user,
-  vocabulary
+    user,
+    vocabulary
 })
 
 export default rootReducer
