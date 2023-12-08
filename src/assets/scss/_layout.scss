@@ -33,8 +33,23 @@ body {
     padding: 20px;
 
     p {
-      line-height: 1.2;
+      line-height: 1.4;
       text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    .inner {
+      margin-bottom: 100px;
+      padding: 40px 20px;
+    }
+
+    footer {
+      p {
+        font-size: 14px;
+      }
     }
   }
 }

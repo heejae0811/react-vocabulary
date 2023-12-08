@@ -17,4 +17,17 @@
 }
 
 @media screen and (max-width: 720px) {
+  .voca-create {
+    &-input {
+      div {
+        margin-top: 30px;
+      }
+    }
+
+    &-btn {
+      button {
+        margin-top: 15px;
+      }
+    }
+  }
 }

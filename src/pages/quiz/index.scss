@@ -71,7 +71,7 @@
 @media screen and (max-width: 720px) {
   .answer {
     h2 {
-      font-size: 40px;
+      font-size: 38px;
     }
 
     input {
@@ -79,41 +79,36 @@
     }
 
     &-pagination {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
   }
 
   .result {
     &-info {
-      gap: 10px;
-      margin-bottom: 10px;
+      gap: 15px;
+      margin-bottom: 15px;
 
       li {
-        padding: 15px;
+        padding: 20px;
 
         h3 {
-          margin-bottom: 10px;
-          font-size: 14px;
-        }
-
-        p {
-          font-size: 12px;
+          font-size: 16px;
         }
       }
     }
 
     &-record {
-      margin-bottom: 10px;
+      gap: 10px;
+      margin-bottom: 15px;
+      padding: 20px;
 
       li {
-        padding: 0 10px;
-
         h3 {
-          font-size: 14px;
+          font-size: 16px;
         }
 
         p {
-          font-size: 12px;
+          font-size: 14px;
         }
       }
     }

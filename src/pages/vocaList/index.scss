@@ -9,9 +9,9 @@
       display: flex;
       justify-content: start;
       align-items: center;
+      gap: 10px;
 
       li {
-        margin-left: 10px;
         cursor: pointer;
       }
     }
@@ -55,28 +55,33 @@
 @media screen and (max-width: 720px) {
   .voca-list {
     &-sort {
-      p {
-        font-size: 12px;
-      }
+      display: block;
 
       ul {
+        margin-top: 10px;
+
         li {
-          font-size: 12px;
+          font-size: 14px;
         }
       }
     }
 
     &-item {
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      max-height: 385px;
-      margin: 10px 0;
+      gap: 15px;
+      margin: 15px 0;
 
       li {
-        padding: 15px;
+        h3 {
+          font-size: 16px;
+        }
 
         p {
-          font-size: 12px;
+          font-size: 14px;
+        }
+
+        button {
+          margin-top: 15px;
         }
       }
     }

@@ -15,7 +15,7 @@ const StyledInput = styled.input`
   }
 
   @media screen and (max-width: 720px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 `
 

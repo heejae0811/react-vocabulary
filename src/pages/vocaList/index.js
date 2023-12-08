@@ -104,7 +104,7 @@ const VocaList = () => {
             <Button
                 bgColor="#FFE382"
                 onClick={() => navigate('/category')}>
-              Category
+                Select vocabulary category
             </Button>
         </Layout>
     )
