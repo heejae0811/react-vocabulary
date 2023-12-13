@@ -1,5 +1,4 @@
-import {forwardRef, useEffect, useRef} from 'react'
-import * as ReactDOM from 'react-dom'
+import {forwardRef} from 'react'
 import styled from 'styled-components'
 
 const StyledInput = styled.input`
@@ -20,31 +19,21 @@ const StyledInput = styled.input`
 `
 
 const Input = forwardRef((props, ref) => {
-    const inputElRef = useRef(ref | null)
-
-    useEffect(() => {
-        const textInput = ReactDOM.findDOMNode(inputElRef.current)
-
-        if (textInput !== null && props.autoFocus) {
-            inputElRef.current.focus()
-        }
-    }, [])
-
     return (
         <label>
             <StyledInput
-                ref={inputElRef}
-                className={props.variant}
                 type={props.type}
                 id={props.id}
                 value={props.value}
+                className={props.variant}
                 placeholder={props.placeholder}
                 maxLength={props.maxlength}
                 readOnly={props.readOnly}
                 disabled={props.disabled}
                 onChange={props.onChange}
                 onKeyPress={props.onKeyPress}
-                onBlur={props.onBlur || null}/>
+                onBlur={props.onBlur || null}
+                autoFocus/>
         </label>
     )
 })
